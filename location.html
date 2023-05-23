@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個專-門市據點</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+
+<style>
+    /* reset */
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans TC', sans-serif;
+        }
+       
+    /* header */
+    .header{
+        max-width: 1440px;
+        margin: auto;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color:#FFFFFF;
+    }
+
+    .header .header_block{
+        max-width: 1280px;
+        background-color:#FFFFFF;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_block .header_navigation{
+        /* background-color: bisque; */
+        display: flex;
+        align-items: center;
+        width: 468px;
+        justify-content: space-between;
+    }
+
+    .header_block .header_navigation a{
+        text-decoration: none;
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    .header_block .header_icon{
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        width: 172px;
+        justify-content: space-between;
+    }
+
+    .header_block .header_icon i{
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+       
+           /* 標題_門市據點 */
+           .store{
+               display: flex;
+               width: 1440px;
+               /* background-color:bisque; */
+               margin: auto;
+               justify-content: space-between;
+               position: relative;
+               top: 66px;
+           }
+       
+           .store_pic img{
+               vertical-align: top;
+           }
+       
+           .store .store_title{
+               width: 403px;
+               /* background-color: aqua; */
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               position: relative;
+               z-index: -1;
+               margin-left: 7%;
+               margin-top: 1%;
+           }
+       
+           .store_title h2{
+               font-size: 44px;
+               color: #7D7D7D;
+               font-weight: normal;
+           }
+       
+           .store .store_circle_pic{
+               width: 90px;
+               height: 90px;
+               border: 10px solid #F7ABC7;
+               border-radius: 50%;
+               position: absolute;
+               left: 12%;
+               bottom: 60%;
+           }
+       
+           /* 內容_門市據點 */
+           .store_info{
+               display: flex;
+               max-width: 1280px;
+               margin: auto;
+               /* background-color: #F7ABC7; */
+               justify-content: space-between;
+               margin-top: 90px;
+           }
+       
+           .store_info .store_info_address{
+               display: flex;
+               flex-direction: column;
+               margin-top: 67px;
+           }
+       
+           .store_info_address .choose_address{
+               width: 587px;
+               height: 70px;
+               font-size: 18px;
+               color: #7D7D7D;
+               text-align: center;
+               border-color:#7D7D7D;
+           }
+       
+           .store_info_map img{
+               vertical-align: top;
+           }
+       
+           .store_info .store_info_map{
+               margin-top: 67px;
+           }
+       
+           .store_info_address a{
+               font-size: 16px;
+               color: #7D7D7D;
+               text-decoration: none;
+               border-bottom: 1px solid #7D7D7D;
+               padding: 21.8px;
+           }
+       
+           .store_info_address i{
+               color: #CF3D37;
+           }
+       
+           .store_info_address .store_name{
+               display: inline-block;
+               /* background-color: #CF3D37; */
+               margin-left:20px;
+               width: 190px;
+               margin-right: 50px;
+           }
+       
+           .store_info_address .store_address{
+               display: inline-block;
+               /* background-color: aqua; */
+           }
+       
+           .store_info_address select{
+               outline: none;
+           }
+       
+           .choose_address option{
+               font-size: 16px;
+           }
+       
+       
+           /* footer */
+     .footer{
+        width: 1440px;
+        height: 220px;
+        margin: auto;
+        background-color:#EECCD9;
+        margin-top: 55px;
+    }
+
+    .footer .footer_block{
+        max-width: 1280px;
+        max-height: 220px;
+        margin: auto;
+        background-color:#EECCD9;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer_block .footer_content{ /*中間聯絡*/ 
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+
+    .footer_block .footer_logo{ /*logo*/
+        align-self: center;
+    }
+
+    .footer_block .footer_icon{ /*右邊icon*/
+        display: flex;
+        align-items: center;
+        width: 172px;
+        justify-content: space-between;
+        align-self: flex-start;
+        margin-top: 30px;
+    }
+
+    .footer_icon i{ /*右邊icon*/
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    .footer_content .footer_contact{ /*文字contact*/
+        font-size: 18px;
+        color: #7D7D7D;
+        margin-bottom: 25px;
+    }
+
+    .footer_content_icon i{
+        margin-right: 20px;
+        margin-bottom: 25px;
+        color: #7D7D7D;
+        font-size: 16px;
+    }
+
+    .footer_content_icon span{
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+       
+       </style>
+
+
+</head>
+
+
+
+<body>
+<!-- header -->
+<header class="header">
+    <div class="header_block">
+        <div class="header_logo">
+            <a href=""><img width = '159' height ='62' src="picture/share/logo_1.svg"></a>
+        </div>
+
+        <nav class="header_navigation">
+            <a href="">線上購物</a>
+            <a href="">最新消息</a>
+            <a href="">門市據點</a>
+            <a href="">聯絡我們</a>
+        </nav>
+
+        <div class="header_icon">
+            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href=""><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- 標題_門市據點 -->
+<div class="store">
+    <div class="store_title">
+        <h2>門<br>市<br>據<br>點</h2>
+    </div>
+    
+    <div class="store_pic">
+        <img src="picture/share/share_pic.svg" alt="">
+    </div>
+
+    <div class="store_circle_pic"></div>
+</div>
+
+<!-- 門市資訊 -->
+<div class="store_info">
+    <div class="store_info_map">
+        <img width="620" height="620" src="picture/store/map.svg" alt="">
+    </div>
+
+    <div class="store_info_address">
+        <select class="choose_address" name="choose_address" id="choose_address">
+            <option value="all">請選擇位置</option>
+            <option value="taipei">台北市</option>
+            <option value="newtaipei">新北市</option>
+            <option value="yilian">宜蘭市</option>
+            <option value="taichung">台中市</option>
+        </select>
+
+        <a class="address_110" href=""><i class="fa-solid fa-location-dot"></i><span class="store_name">MOKA 誠品信義店</span><span class="store_address">110 台北市信義區松高路11號B2</span></a>
+        <a class="address_104" href=""><i class="fa-solid fa-location-dot"></i><span class="store_name">MOKA 新光三越南西店</span><span class="store_address">104 台北市中山區南京西路12號</span></a>
+        <a class="address_103" href=""><i class="fa-solid fa-location-dot"></i><span class="store_name">MOKA 京站廣場店 </span><span class="store_address">103 台北市大同區承德路一段1號</span></a>
+        <a class="address_241" href=""> <i class="fa-solid fa-location-dot"></i><span class="store_name">MOKA 三重店</span><span class="store_address">241 新北市三重區福裕街32號</span></a>
+        <a class="address_236" href=""><i class="fa-solid fa-location-dot"></i><span class="store_name">MOKA 土城店</span><span class="store_address">236 新北市土城區和城路16號</span></a>
+        <a class="address_260" href=""><i class="fa-solid fa-location-dot"></i><span class="store_name">MOKA 宜蘭店</span><span class="store_address">260 宜蘭縣宜蘭市東園路9號</span></a>
+        <a class="address_406" href=""><i class="fa-solid fa-location-dot"></i><span class="store_name">MOKA 臺中北屯店</span><span class="store_address">406 臺中市北屯區后庄六街23號</span></a>
+        <a class="adress_408" href=""><i class="fa-solid fa-location-dot"></i><span class="store_name">MOKA 臺中南屯店</span><span class="store_address">408 臺中市南屯區龍富十三街33號</span></a>
+    </div>
+</div>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer_block">
+        <div class="footer_logo">
+            <img src="picture/share/logo_2.svg">
+        </div>
+
+        <div class="footer_content">
+            <span class="footer_contact"><b>Contact</b></span>
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-phone"></i><span>0800-527-527</span>
+            </div>
+
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-envelope"></i><span>service@maca.com</span>
+            </div>
+
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-clock"></i><span>週一 ~ 週五 09:00~18:00,六日與國定假日除外</span>
+            </div>
+        </div>
+
+        <div class="footer_icon">
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-line"></i></a>
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>

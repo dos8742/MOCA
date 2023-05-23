@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個專-購物車</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+
+<style>
+    /* reset */
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    /* header */
+    .header{
+        max-width: 1440px;
+        margin: auto;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color:#FFFFFF;
+    }
+
+    .header .header_block{
+        max-width: 1280px;
+        background-color:#FFFFFF;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_block .header_navigation{
+        /* background-color: bisque; */
+        display: flex;
+        align-items: center;
+        width: 468px;
+        justify-content: space-between;
+    }
+
+    .header_block .header_navigation a{
+        text-decoration: none;
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    .header_block .header_icon{
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        width: 172px;
+        justify-content: space-between;
+    }
+
+    .header_block .header_icon i{
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    /* 標題_購物車*/
+    .addtocart{
+        display: flex;
+        max-width: 1440px;
+        /* background-color:bisque; */
+        margin: auto;
+        justify-content: space-between;
+        top: 66px;
+        /* position: relative; */
+    }
+
+    .addtocart_pic img{
+        vertical-align: top;
+    }
+
+    .addtocart .addtocart_title{
+        width: 403px;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      
+    }
+
+    .addtocart_title h2{
+        font-size: 44px;
+        color: #7D7D7D;
+        font-weight: normal;
+    }
+
+    .addtocart_title .addtocart_circle_pic{
+        width: 90px;
+        height: 90px;
+        border: 10px solid #F7ABC7;
+        border-radius: 50%;
+        z-index: -1;
+        position: absolute;
+        left: 32%;
+        bottom: 55%;
+    }
+
+    /* 內容_購物車 */
+  
+    .addtocart_process{
+        max-width: 1280px;
+        margin: auto;
+        /* background-color: #F7ABC7; */
+        display: flex;
+        margin-top: 30px;
+    }
+
+    .addtocart_process span{
+        /* background-color: #7D7D7D; */
+        display: block;
+        width: 427px;
+        font-size: 18px;
+        text-align: center;
+        color: #7D7D7D;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .addtocart_process .process_first{
+        background-color: #86E1E0;
+    }
+
+    .addtocart_process .process_second{
+        background-color: #C5EA8B;
+    }
+
+    .addtocart_process .process_third{
+        background-color: #C5EA8B;
+    }
+
+    .addtocart_shopping_content{
+        /* background-color: #F7ABC7; */
+        max-width: 1280px;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .addtocart_shopping_content .content_label{
+        display: flex;
+        border-bottom: 1px solid #7D7D7D;
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    .content_label span{
+        display: block;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .content_label .label_product{
+        width: 440px;
+        /* background-color: #7D7D7D; */
+    }
+
+     .content_label .label_pirce,.label_price,.label_quantity,.label_subtotal{
+        width: 280px;
+        /* background-color: #86E1E0; */
+     }
+
+     /* 項目_商品*/
+     .product_label{
+        max-width: 1280px;
+        /* background-color: brown; */
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        font-size: 18px;
+        border-bottom: 1px solid #7D7D7D;
+        color: #7D7D7D;
+        margin-top: 100px;
+     }
+
+     .product_label span{
+        display: inline-block;
+        width: 320px;
+        text-align: center;
+        padding: 15px;
+        box-sizing: border-box;
+     }
+
+     .product_items{
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        font-size: 16px;
+     }
+
+     .product_items .product_name{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+     }
+
+     .product_items .product_name,.product_pirce,.product_amount,.product_quantity{
+        /* background-color: #86E1E0; */
+        width: 25%;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 16px;
+        color: #7D7D7D;
+     }
+
+      .product_items .product_cancel{
+        position: absolute;
+        right: 0;
+      }
+
+      .product_items .product_name{
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .product_cancel button{
+        background-color: #FFFFFF;
+        border-style: none;
+        font-size: 16px;
+        color: #7D7D7D;
+      }
+
+      .product_quantity{
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        color: #7D7D7D;
+      }
+
+      .product_quantity span{
+        display: inline-block;
+        padding: 10px;
+      }
+
+      .product_quantity button{
+        border-style: none;
+        padding: 5px;
+        background-color: #86E1E0;
+        border-radius: 50px;
+        font-size: 16px;
+        color: #7D7D7D;
+
+      }
+
+      .product_quantity .quantity_button{
+        background-color: #86E1E0;
+        width: 120px;
+        border-radius: 50px;
+      }
+
+      /* 選擇送貨及付款方式*/
+      .addtocart_pay{
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5%;
+      }
+
+      .addtocart_pay .addtocart_choose_pay{
+        width: 530px;
+        /* background-color: #C5EA8B; */
+      }
+
+      .addtocart_choose_pay .pay_title{
+        text-align: center;
+        border-bottom: 1px solid #7D7D7D;
+        font-size: 18px;
+        color: #7D7D7D;
+        padding: 15px;
+      }
+
+      .addtocart_pay .pay_transport{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        color: #7D7D7D;
+        margin-top: 30px;
+      }
+
+      .pay_transport select{
+        width: 240px;
+        text-align: center;
+        border-style: none;
+        padding: 10px;
+        font-size: 16px;
+        color: #7D7D7D;
+        background-color: #86E1E0;
+        border-radius: 50px;
+        margin-top: 20px;
+      }
+
+      .addtocart_pay .pay_payment{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        color: #7D7D7D;
+        margin-top: 50px;
+      }
+
+      .pay_payment select{
+        width: 240px;
+        text-align: center;
+        border-style: none;
+        padding: 10px;
+        font-size: 16px;
+        color: #7D7D7D;
+        background-color: #86E1E0;
+        border-radius: 50px;
+        margin-top: 20px;
+      }
+
+      /* 訂單資訊 */
+      .addtocart_pay .addtocart_order{
+        width: 530px;
+        /* background-color: #C5EA8B; */
+      }
+
+      .addtocart_order .order_title{
+        text-align: center;
+        border-bottom: 1px solid #7D7D7D;
+        font-size: 18px;
+        color: #7D7D7D;
+        padding: 15px;
+      }
+
+      .order_info span{
+        width: 265px;
+      }
+
+    .order_info div{
+        display: flex;
+        text-align: center;
+        font-size: 16px;
+        color: #7D7D7D;
+        margin-top: 35px;
+    }
+
+    .addtocart_pay .order_checkout{
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+    }
+
+    .order_checkout_button button{
+        font-size: 16px;
+        color: #7D7D7D;
+        width: 240px;
+        padding: 10px;
+        border-radius: 50px;
+        border-style:none;
+        background-color: #C5EA8B;
+    }
+
+    /* 宅配服務、線上支付、保存與食用 */
+    .addtocart_precautions_block{
+        width: 1440px;
+        margin: auto;
+        background-color: #B494C5;
+        margin-top: 5%;
+        padding: 50px;
+        box-sizing: border-box;
+
+    }
+
+    .addtocart_precautions_block .addtocart_precautions{
+        max-width: 1280px;
+        margin: auto;
+        background-color: #B494C5;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .delivery_service .delivery_service_title i{
+        font-size: 50px;
+        color: #FFFFFF;
+    }
+
+    .delivery_service .delivery_service_title span{
+        font-size: 18px;
+        margin-left: 20px;
+        color: #FFFFFF;
+    }
+
+    .delivery_service .delivery_service_title{
+        display: flex;
+    }
+
+    .delivery_service .delivery_service_txt{
+        font-size: 16px;
+        color:#FFFFFF;
+        line-height: 30px;
+        margin-top: 30px;
+        margin-left: 80px;
+    }
+
+    .online_payment .online_payment_title i{
+        font-size: 50px;
+        color: #FFFFFF;
+    }
+
+    .online_payment .online_payment_title span{
+        font-size: 18px;
+        margin-left: 20px;
+        color: #FFFFFF;
+    }
+
+    .online_payment .online_payment_title{
+        display: flex;
+    }
+
+    .online_payment .online_payment_txt{
+        font-size: 16px;
+        color:#FFFFFF;
+        line-height: 30px;
+        margin-top: 30px;
+        margin-left: 80px;
+    }
+
+
+    .save_food .save_food_title i{
+        font-size: 50px;
+        color: #FFFFFF;
+    }
+
+    .save_food .save_food_title span{
+        font-size: 18px;
+        margin-left: 20px;
+        color: #FFFFFF;
+    }
+
+    .save_food .save_food_title{
+        display: flex;
+    }
+
+    .save_food .save_food_txt{
+        font-size: 16px;
+        color:#FFFFFF;
+        line-height: 30px;
+        margin-top: 30px;
+        margin-left: 65px;
+    }
+
+    /* footer */
+    .footer{
+        width: 1440px;
+        height: 220px;
+        margin: auto;
+        background-color:#EECCD9;
+    }
+
+    .footer .footer_block{
+        max-width: 1280px;
+        max-height: 220px;
+        margin: auto;
+        background-color:#EECCD9;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer_block .footer_content{ /*中間聯絡*/ 
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+
+    .footer_block .footer_logo{ /*logo*/
+        align-self: center;
+    }
+
+    .footer_block .footer_icon{ /*右邊icon*/
+        display: flex;
+        align-items: center;
+        width: 172px;
+        justify-content: space-between;
+        align-self: flex-start;
+        margin-top: 30px;
+    }
+
+    .footer_icon i{ /*右邊icon*/
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    .footer_content .footer_contact{ /*文字contact*/
+        font-size: 18px;
+        color: #7D7D7D;
+        margin-bottom: 25px;
+    }
+
+    .footer_content_icon i{
+        margin-right: 20px;
+        margin-bottom: 25px;
+        color: #7D7D7D;
+        font-size: 16px;
+    }
+
+    .footer_content_icon span{
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+
+
+</style>
+</head>
+<body>
+<!-- header -->
+<header class="header">
+    <div class="header_block">
+        <div class="header_logo">
+            <a href="http://127.0.0.1:5500/index.html.html"><img width = '159' height ='62' src="picture/share/logo_1.svg"></a>
+        </div>
+
+        <nav class="header_navigation">
+            <a href="http://127.0.0.1:5500/shopping.html.html">線上購物</a>
+            <a href="http://127.0.0.1:5500/news.html.html">最新消息</a>
+            <a href="http://127.0.0.1:5500/location.html.html">門市據點</a>
+            <a href="http://127.0.0.1:5500/contact.html.html">聯絡我們</a>
+        </nav>
+
+        <div class="header_icon">
+            <a href="http://127.0.0.1:5500/member.html.html"><i class="fa-solid fa-user"></i></a>
+            <a href="http://127.0.0.1:5500/cart.html.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- 標題_購物車 -->
+<div class="addtocart">
+    <div class="addtocart_title">
+        <h2>購<br>物<br>車</h2>
+        <div class="addtocart_circle_pic"></div>
+    </div>
+    
+    <div class="addtocart_pic">
+        <img src="picture/share/share_pic.svg" alt="">
+    </div>
+</div>
+
+<!-- 內容_購物車_流程 -->
+<div class="addtocart_process">
+    <span class="process_first"><b>1. 購物車</b></span>
+    <span class="process_second"><b>2. 填寫資料</b></span>
+    <span class="process_third"><b>3. 訂單確認</b></span>
+</div>
+
+<!-- 內容_購物車_項目 -->
+<div class="product_label">
+    <span><b>商品</b></span>
+    <span><b>價格</b></span>
+    <span><b>數量</b></span>
+    <span><b>小計</b></span>
+</div>
+
+<div class="product_items">
+    <div class="product_name">
+        <img src="picture/addtocart/萊姆伏特加.svg" width="120" height="135" alt="">
+        <span>萊姆伏特加</span>
+    </div>
+
+    <div class="product_pirce">
+        <span>NTD 80</span>
+    </div>
+
+    <div class="product_quantity">
+        <div class="quantity_button">
+            <form action="">
+                <button><i class="fa-solid fa-minus"></i></button>
+                <span>1</span>
+                <button><i class="fa-solid fa-plus"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="product_amount">
+        <span>NTD 80</span>
+    </div>
+
+    <div class="product_cancel">
+        <form action="">
+        <button><i class="fa-solid fa-xmark"></i></button>
+        </form>
+    </div>
+</div>
+
+<div class="product_items">
+    <div class="product_name">
+        <img src="picture/addtocart/君度橙酒.svg" width="120" height="135" alt="">
+        <span>君度橙酒</span>
+    </div>
+
+    <div class="product_pirce">
+        <span>NTD 80</span>
+    </div>
+
+    <div class="product_quantity">
+        <div class="quantity_button">
+            <form action="">
+                <button><i class="fa-solid fa-minus"></i></button>
+                <span>1</span>
+                <button><i class="fa-solid fa-plus"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="product_amount">
+        <span>NTD 80</span>
+    </div>
+
+    <div class="product_cancel">
+        <form action="">
+        <button><i class="fa-solid fa-xmark"></i></button>
+        </form>
+    </div>
+</div>
+
+<!-- 選擇送貨及付款方式 & 訂單資訊 -->
+<div class="addtocart_pay">
+    <div class="addtocart_choose_pay">
+        <div class="pay_title">
+            <span><b>選擇送貨及付款方式</b></span>
+        </div>
+
+        <div class="pay_transport">
+            <span>運送方式</span>
+            <select name="choose_transport" id="choose_transport">
+                <option value="all">請選擇運送方式</option>
+                <option value="7-11">7-11</option>
+                <option value="familymart">全家</option>
+                <option value="lerfu">萊爾富</option>
+                <option value="home_delivery">宅配</option>
+                
+            </select>
+        </div>
+
+        <div class="pay_payment">
+            <span>付款方式</span>
+            <select name="choose_payment" id="choose_payment">
+                <option value="all">請選擇付款方式</option>
+                <option value="supermarket">取貨付款</option>
+                <option value="home_delivery">宅到付款</option>
+                <option value="atm">ATM 轉帳</option>
+                <option value="credit_card">信用卡 付款</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="addtocart_order">
+        <div class="order_title">
+            <span><b>訂單資訊</b></span>
+        </div>
+
+        <div class="order_info">
+            <div>
+                <span>小計</span>
+                <span>NTD 160</span>
+            </div>
+
+            <div>
+                <span>運費</span>
+                <span>NTD 80</span>
+            </div>
+
+            <div>
+                <span><b>總計</b></span>
+                <span><b>NTD 240</b></span>
+            </div>
+        </div>
+
+        <div class="order_checkout">
+            <div class="order_checkout_button">
+                <form action="">
+                    <button type="submit">結帳</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 宅配服務、線上支付、保存與食用 -->
+<div class="addtocart_precautions_block">
+    <div class="addtocart_precautions">
+        <div class="delivery_service">
+            <div class="delivery_service_title">
+                <i class="fa-solid fa-truck"></i>
+                <span>宅配服務</span>
+            </div>
+            <div class="delivery_service_txt">
+                <p>滿NT2000 即享免運<br>冷凍配送<br>周二至周六為到貨日<br>黑貓宅急便配送</p>
+            </div>
+        </div>
+
+        <div class="online_payment">
+            <div class="online_payment_title">
+                <i class="fa-regular fa-credit-card"></i>
+                <span>線上支付</span>
+            </div>
+            <div class="online_payment_txt">
+                <p>信用卡<br>ATM 轉帳</p>
+            </div>
+        </div>
+
+        <div class="save_food">
+            <div class="save_food_title">
+                <i class="fa-solid fa-snowflake"></i>
+                <span>保存與食用</span>
+            </div>
+            <div class="save_food_txt">
+                <p>冷藏7天，冷凍30天<br>食用需回溫30分鐘</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer_block">
+        <div class="footer_logo">
+            <img src="picture/share/logo_2.svg">
+        </div>
+
+        <div class="footer_content">
+            <span class="footer_contact"><b>Contact</b></span>
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-phone"></i><span>0800-527-527</span>
+            </div>
+
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-envelope"></i><span>service@maca.com</span>
+            </div>
+
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-clock"></i><span>週一 ~ 週五 09:00~18:00,六日與國定假日除外</span>
+            </div>
+        </div>
+
+        <div class="footer_icon">
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-line"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+</body>
+</html>

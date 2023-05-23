@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個專-最新消息</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+
+<style>
+    /* reset */
+   *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    /* header */
+    .header{
+        max-width: 1440px;
+        margin: auto;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color:#FFFFFF;
+    }
+
+    .header .header_block{
+        max-width: 1280px;
+        background-color:#FFFFFF;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_block .header_navigation{
+        /* background-color: bisque; */
+        display: flex;
+        align-items: center;
+        width: 468px;
+        justify-content: space-between;
+    }
+
+    .header_block .header_navigation a{
+        text-decoration: none;
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    .header_block .header_icon{
+        /* background-color: blueviolet; */
+        display: flex;
+        align-items: center;
+        width: 172px;
+        justify-content: space-between;
+    }
+
+    .header_block .header_icon i{
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    /* 標題_最新消息*/
+    .news{
+        display: flex;
+        width: 1440px;
+        /* background-color:bisque; */
+        margin: auto;
+        justify-content: space-between;
+        top: 66px;
+        /* position: relative; */
+    }
+
+    .news_pic img{
+        vertical-align: top;
+    }
+
+    .news .news_title{
+        width: 403px;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      
+    }
+
+    .news_title h2{
+        font-size: 44px;
+        color: #7D7D7D;
+        font-weight: normal;
+    }
+
+    .news_title .news_circle_pic{
+        width: 90px;
+        height: 90px;
+        border: 10px solid #F7ABC7;
+        border-radius: 50%;
+        z-index: -1;
+        position: absolute;
+        left: 32%;
+        bottom: 60%;
+    }
+
+    /* 內容_最新消息 */
+    /* 左塊 */
+    .news_content{
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        /* background-color:black; */
+        align-items: flex-start;
+        margin-top: 70px;
+    }
+
+    .news_content .news_content_button{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        position: sticky;
+        top: 67px;
+        /* background-color: #86E1E0; */
+    }
+
+    .news_content_button a{
+        text-decoration: none;
+        font-size: 18px;
+        color: #7D7D7D;
+        width: 200px;
+        padding: 10px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    
+    }
+
+    .news_content_button .latest_news{
+        background-color: #86E1E0;
+    }
+
+    .news_content_button .activity_news,.media_news{
+        background-color: #C5EA8B;
+    }
+    
+    .news_content_button .activity_news:active,.media_news:active{
+        background-color:#86E1E0;
+    }
+
+    /* 右塊 */
+    .news_content .news_content_article{
+        max-width: 1080px;
+        display: grid;
+        grid-template-rows: repeat(6,1fr);
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    .news_content_article .card{
+        display: flex;
+        /* background-color:#86E1E0; */
+        font-size: 16px;
+        color: #434343;
+    }
+
+    .news_content_article .card:first-child{ /*左1*/
+        flex-direction: column;
+        grid-area: 1/1/4/2;
+        }
+    
+    .news_content_article .card .txt{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #FAF0F4;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        color: #434343;
+        line-height: 30px
+    }
+
+    .news_content_article .card:first-child .pic img{ 
+        width: 100%;
+        vertical-align: top;
+    }
+
+    .news_content_article .card:nth-child(2){ /*左2*/
+        grid-area: 4/1/5/2;
+        width: 570px;
+    }
+
+    .news_content_article .card:nth-child(3){ /*左3*/
+        grid-area: 5/1/6/2;
+        width: 570px;
+    }
+
+    .news_content_article .card:nth-child(4){ /*左4*/
+        grid-area: 6/1/7/2;
+        width: 570px;
+    }
+    
+
+    .news_content_article .card .pic img{  
+        height: 100%;
+    }
+
+    .news_content_article .card:first-child .txt{ 
+        height: 100%;
+        width: auto;
+        text-align: center;
+    }
+
+    .news_content_article .card .txt h3{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .news_content_article .card a{
+        text-decoration: none;
+        color: #434343;
+    }
+
+    /* footer */
+    .footer{
+        width: 1440px;
+        height: 220px;
+        margin: auto;
+        background-color:#EECCD9;
+        margin-top: 70px;
+    }
+
+    .footer .footer_block{
+        max-width: 1280px;
+        max-height: 220px;
+        margin: auto;
+        background-color:#EECCD9;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer_block .footer_content{ /*中間聯絡*/ 
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+
+    .footer_block .footer_logo{ /*logo*/
+        align-self: center;
+    }
+
+    .footer_block .footer_icon{ /*右邊icon*/
+        display: flex;
+        align-items: center;
+        width: 172px;
+        justify-content: space-between;
+        align-self: flex-start;
+        margin-top: 30px;
+    }
+
+    .footer_icon i{ /*右邊icon*/
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    .footer_content .footer_contact{ /*文字contact*/
+        font-size: 18px;
+        color: #7D7D7D;
+        margin-bottom: 25px;
+    }
+
+    .footer_content_icon i{
+        margin-right: 20px;
+        margin-bottom: 25px;
+        color: #7D7D7D;
+        font-size: 16px;
+    }
+
+    .footer_content_icon span{
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+
+</style>
+
+</head>
+<body>
+<!-- header -->
+<header class="header">
+    <div class="header_block">
+        <div class="header_logo">
+            <a href=""><img width = '159' height ='62' src="picture/share/logo_1.svg"></a>
+        </div>
+
+        <nav class="header_navigation">
+            <a href="">線上購物</a>
+            <a href="">最新消息</a>
+            <a href="">門市據點</a>
+            <a href="">聯絡我們</a>
+        </nav>
+
+        <div class="header_icon">
+            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href=""><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- 標題_最新消息 -->
+<div class="news">
+    <div class="news_title">
+        <h2>最<br>新<br>消<br>息</h2>
+        <div class="news_circle_pic"></div>
+    </div>
+    
+    <div class="news_pic">
+        <img src="picture/share/share_pic.svg" alt="">
+    </div>
+</div>
+
+<!-- 內容_最新消息 -->
+<div class="news_content">
+
+    <!-- 左塊 -->
+    <div class="news_content_button">
+        <a class="latest_news" href=""><b>最新消息</b></a>
+        <a class="activity_news" href=""><b>活動資訊</b></a>
+        <a class="media_news" href=""><b>媒體資訊</b></a>
+    </div>
+
+    <!-- 右塊 -->
+    <div class="news_content_article">
+
+       
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Sailor Moon.svg" alt="Sailor Moon"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>「戰鬥！愛！變身！」我們的馬卡龍已經變身成為美少女戰士！</h3></a>
+                <a href=""><p>讓您在每一口都感受到正義與愛的力量<br>每一款馬卡龍都由我們的專業糕點師<br>以最高品質的材料和技術製作而成<br>現在就來品嚐這些令人難以置信的美味甜點<br> 一起向著愛和和平的目標前進吧！</p></a>
+            </div>
+        </div>
+    
+
+        
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Cats.svg" alt="Cats"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>給迷戀貓咪的您</h3></a>
+                <a href=""><p>每一口都是令人陶醉的味道<br>每一個造型都是令人愛不釋手的可愛貓咪</p></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Shiba.svg" alt="Shiba"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>為大家帶來了可愛的柴犬馬卡龍</h3></a>
+                <a href=""><p>無論您是柴犬迷還是美食愛好者<br>都不要錯過這款絕妙的甜點</p></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Pokemon.svg" alt="Pokemon"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>你們有沒有玩過最新的寶可夢馬卡龍呢？</h3></a>
+                <a href=""><p>集合了寶可夢主要角色的特色<br>每一款馬卡龍都擁有獨特的外型和口感<br>特別推出了一系列寶可夢馬卡龍的限定活動！</p></a>
+            </div>
+        </div>
+      
+
+    
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Cactus.svg" alt="Cactus"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>給喜愛多肉植物的您</h3></a>
+                <a href=""><p>品嚐美味的法式甜蜜點<br>享受仙人掌的視覺盛宴！</p></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Children.svg" alt="Children"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>動手玩創意!</h3></a>
+                <a href=""><p>家中的寶貝每天的零嘴都長得很無趣嗎?<br>那就趕快來MACA打造專屬的馬卡龍吧!</p></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Born.svg" alt="Born"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>您的寶寶出生了嗎?</h3></a>
+                <a href=""><p>恭喜您生出這世界上最可愛的寶寶<br>MOCA為您打造專屬的彌月禮盒</p></a>
+            </div>
+        </div>
+       
+
+       
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Tea.svg" alt="Tea"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>當時間指針指向下午茶時間</h3></a>
+                <a href=""><p>你是否也有些許餓了呢？<br>不妨來一份精緻可口的馬卡龍下午茶</p></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Rainbow.svg" alt="Rainbow"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>歡迎來到我們的彩虹馬卡龍活動！</h3></a>
+                <a href=""><p>讓您品嚐到各種不同口味的美味<br>同時也象徵了多元、包容和樂觀的精神</p></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="pic">
+                <a href=""><img src="picture/news/News_Christmas.svg" alt="Christmas"></a>
+            </div>
+            <div class="txt">
+                <a href=""><h3>聖誕節又到了！</h3></a>
+                <a href=""><p>以聖誕樹、麋鹿和聖誕老人元素作為設計靈感<br>讓您不僅品嚐到經典的馬卡龍<br>還能感受到節日的氣氛</p></a>
+            </div>
+         </div>
+    
+    </div>
+</div>
+
+
+</div>
+
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer_block">
+        <div class="footer_logo">
+            <img src="picture/share/logo_2.svg">
+        </div>
+
+        <div class="footer_content">
+            <span class="footer_contact"><b>Contact</b></span>
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-phone"></i><span>0800-527-527</span>
+            </div>
+
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-envelope"></i><span>service@maca.com</span>
+            </div>
+
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-clock"></i><span>週一 ~ 週五 09:00~18:00,六日與國定假日除外</span>
+            </div>
+        </div>
+
+        <div class="footer_icon">
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-line"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

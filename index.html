@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個專-首頁</title>
+    <!-- icon-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google-font-link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+    <!-- js-link -->
+    <link rel="stylesheet" href="owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+
+    <style>
+    /* reset */
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    /* header */
+    .header{
+        max-width: 1440px;
+        margin: auto;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color:#FFFFFF;
+    }
+
+    .header .header_block{
+        max-width: 1280px;
+        background-color:#FFFFFF;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header_block .header_navigation{
+        display: flex;
+        align-items: center;
+        width: 468px;
+        justify-content: space-between;
+    }
+
+    .header_block .header_navigation a{
+        text-decoration: none;
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    .header_block .header_icon{
+        display: flex;
+        align-items: center;
+        width: 172px;
+        justify-content: space-between;
+    }
+
+    .header_block .header_icon i{
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    /* header下方圖檔 */
+    .font_page_top{
+        max-width: 1440px;
+        margin: auto;
+        background-color: #EECCD9;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .page_top_pic .page_top_decorate_one,.page_top_decorate_two{
+        width: 10px;
+        background-color: #FFFFFF;
+        margin-left: 30px;
+    }
+
+    .font_page_top .page_top_pic{
+        display: flex;
+        margin-right: 50px;
+    }
+
+    .page_top_pic img{
+        vertical-align:top;
+    }
+
+    .font_page_top .page_top_txt {
+        font-size: 70px;
+        color: #FFFFFF;
+        padding: 100px;
+        box-sizing: border-box;
+    }
+
+    /* 影片 */
+    .font_page_video{
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .font_page_video .page_video_title span{
+        font-size: 36px;
+        color: #EECCD9;
+        text-shadow: 3px 3px 2px #DD769E;
+    }
+
+    .font_page_video .page_video_decorate{
+        background-color: #D9D9D9;
+        width: 100px;
+        padding: 5px;
+        margin-top: 20px;
+    }
+
+    .font_page_video .page_video_title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .font_page_video .page_video_txt{
+        font-size: 16px;
+        color: #434343;
+        line-height: 40px;
+    }
+
+    .page_video i{
+        color:#FFFFFF;
+        background-color: #EECCD9;
+        font-size: 80px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .font_page_video .page_video{
+    position: relative;
+    }
+
+    .page_video .page_video_a {
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    }
+
+    /* 輪播圖 */
+    .font_page_carousel{
+        max-width: 1440px;
+        margin: auto;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 0;
+    }
+
+    .font_page_carousel .owl-carousel{
+        position: absolute;
+        bottom: 18%;
+    }
+
+    /*即將上市 */
+    .font_page_new_arrivals_block{
+        max-width: 1280px;
+        margin: auto;
+        /* background-color: #B494C5; */
+        text-align: center;
+        font-size: 36px;
+        margin-top: 100px;
+    }
+
+    .font_page_new_arrivals_product {
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+        font-size: 18px;
+        color: #7D7D7D;
+    }
+
+    .font_page_new_arrivals_product .new_product.new_product:nth-child(1),.new_product.new_product:nth-child(3),.new_product.new_product:nth-child(5),.new_product.new_product:nth-child(7){
+        margin-top: 150px;
+    }
+
+    .font_page_new_arrivals_title h3{
+        font-size: 36px;
+        color: #EECCD9;
+        text-shadow: 3px 3px 2px #DD769E;
+    }
+
+    .new_product .pic{
+        width: 180px;
+    }
+
+    .new_product .pic img{
+        width: 100%;
+    }
+
+    /* 關於我們 */
+    .font_page_about_block{
+        width: 1440px;
+        margin: auto;
+        background-color: #B494C5;
+        margin-top: 200px;
+    }
+
+    .font_page_about{
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #B494C5;
+        position: relative;
+    }
+
+    .font_page_about .page_about_txt{
+        width: 530px;
+        color: #FFFFFF;
+        padding: 20px;
+        box-sizing: border-box;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    .font_page_about .page_about_pic{
+        position: absolute;
+        left: 10%;
+        bottom:-15%;
+        background-color: #EECCD9;
+        width: 500px;
+        height: 680px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .page_about_pic img{
+        margin-top: 20px;
+    }
+
+    /* 更多關於我們 */
+    .font_page_about_more{
+        max-width: 1280px;
+        margin: auto;
+        /* background-color: #B494C5; */
+        margin-top: 120px;
+        position: relative;
+    }
+
+    .font_page_about_more .font_page_about_more_first,.font_page_about_more_third{
+        display: flex;
+    }
+
+    .font_page_about_more .font_page_about_more_second{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .font_page_about_more_first p,.font_page_about_more_second p,.font_page_about_more_third p{
+        width: 640px;
+        margin: auto;
+        line-height: 30px;
+        font-size: 18px;
+    }
+    .font_page_about_more_first h3,.font_page_about_more_second h3,.font_page_about_more_third h3{
+        width: 640px;
+        margin: auto;
+        font-size: 30px;
+        color: #7d7d7d;
+        padding: 50px;
+        box-sizing: border-box;
+
+    }
+
+    .font_page_about_more .font_page_about_more_first,.font_page_about_more_second{
+        margin-bottom: 50px;
+    }
+
+    .font_page_about_more .about_more_circle_pic_first{
+        width: 100px;
+        height: 100px;
+        border: 10px solid #F7ABC7;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 76%;
+        right:90%;
+        z-index: -1;
+    }
+
+    .font_page_about_more .about_more_circle_pic_second{
+        width: 100px;
+        height: 100px;
+        border: 10px solid #F7ABC7;
+        border-radius: 50%;
+        position: absolute;
+        right:40%;
+        top: 40%;
+        z-index: -1;
+    }
+
+    .font_page_about_more .about_more_circle_pic_third{
+        width: 100px;
+        height: 100px;
+        border: 10px solid #F7ABC7;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 4%;
+        z-index: -1;
+    }
+
+    /* footer */
+    .footer{
+        width: 1440px;
+        height: 220px;
+        margin: auto;
+        background-color:#EECCD9;
+        margin-top: 100px;
+    }
+
+    .footer .footer_block{
+        max-width: 1280px;
+        max-height: 220px;
+        margin: auto;
+        background-color:#EECCD9;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer_block .footer_content{ 
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+
+    .footer_block .footer_logo{ 
+        align-self: center;
+    }
+
+    .footer_block .footer_icon{ 
+        display: flex;
+        align-items: center;
+        width: 172px;
+        justify-content: space-between;
+        align-self: flex-start;
+        margin-top: 30px;
+    }
+
+    .footer_icon i{ 
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+    .footer_content .footer_contact{ 
+        font-size: 18px;
+        color: #7D7D7D;
+        margin-bottom: 25px;
+    }
+
+    .footer_content_icon i{
+        margin-right: 20px;
+        margin-bottom: 25px;
+        color: #7D7D7D;
+        font-size: 16px;
+    }
+
+    .footer_content_icon span{
+        font-size: 16px;
+        color: #7D7D7D;
+    }
+
+</style>
+
+</head>
+<body>
+<!-- header -->
+<header class="header">
+    <div class="header_block">
+        <div class="header_logo">
+            <a href=""><img width = '159' height ='62' src="picture/share/logo_1.svg"></a>
+        </div>
+
+        <nav class="header_navigation">
+            <a href="">線上購物</a>
+            <a href="">最新消息</a>
+            <a href="">門市據點</a>
+            <a href="">聯絡我們</a>
+        </nav>
+
+        <div class="header_icon">
+            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href=""><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- header下方圖檔 -->
+<div class="font_page_top">
+    <div class="page_top_txt">
+        <p><b>Discover the<br>Art of Flavor<br>with MOCA’s<br>Macarons</b></p>
+    </div>
+
+    <div class="page_top_pic">
+        <img src="picture/font-page/font-page_top_pic.svg" alt="">
+        <div class="page_top_decorate_one"></div>
+        <div class="page_top_decorate_two"></div>
+    </div>
+</div>
+
+<!-- 影片 -->
+<div class="font_page_video">
+    <div class="page_video_title">
+        <span><b>由法國廚師<br>Raphaël製作</b></span>
+        <div class="page_video_decorate"></div>
+    </div>
+
+    <div class="page_video">
+        <div class="page_video_img">
+            <img src="picture/font-page/font_page_video_pic.svg" alt="">
+        </div>
+        <div class="page_video_a">
+            <a href="picture/font-page/font_page_video.webm"><i class="fa-regular fa-circle-play"></i></a>
+        </div>
+    </div>
+
+    <div class="page_video_txt">
+        <p>來自法國糕點師 Raphaël 的 MOCA 是一<br>家台灣自製法式馬卡龍甜點店，提供一系<br>列超越傳統口味的馬卡龍。當您輕咬一口<br>馬卡龍時，猶如在品嚐一件精緻的藝術<br>品。這種美食不僅讓您的味蕾享受到絕佳<br>的口感，更是一種奢華的體驗，讓人愛不<br>釋手，不斷回味</p>
+    </div>
+</div>
+
+
+<!-- 輪播圖 -->
+<div class="font_page_carousel">
+    <div class="page_carousel_background">
+        <img src="picture/font-page/page_carousel_background.svg" alt="">
+    </div>
+    <div class="owl-carousel owl-theme">
+        <div><img src="picture/font-page/font_page_carousel_first.svg" alt=""></div>
+        <div><img src="picture/font-page/font_page_carousel_second.svg" alt=""></div>
+        <div><img src="picture/font-page/font_page_carousel_third.svg" alt=""></div>
+        <div><img src="picture/font-page/font_page_carousel_fourth.svg" alt=""></div>
+        <div><img src="picture/font-page/font_page_carousel_fifth.svg" alt=""></div>
+        <div><img src="picture/font-page/font_page_carousel_sixth.svg" alt=""></div>
+    </div>
+</div>
+
+
+<!-- 即將上市 -->
+<div class="font_page_new_arrivals_block">
+    <div class="font_page_new_arrivals_title">
+        <h3>即將上市</h3>
+    </div>
+    <div class="font_page_new_arrivals_product">
+        <div class="new_product new_product_first">
+            <div class="pic">
+                <img src="picture/font-page/新品上市-鮮奶玉米片.svg" alt="鮮奶玉米片">
+            </div>
+            <div class="name">
+                <span>鮮奶玉米片</span>
+            </div>
+        </div>
+
+        <div class="new_product new_product_second">
+            <div class="pic">
+                <img src="picture/font-page/新品上市-奇多芝士.svg" alt="奇多芝士">
+            </div>
+            <div class="name">
+                <span>奇多芝士</span>
+            </div>
+        </div>
+
+        <div class="new_product new_product_third">
+            <div class="pic">
+                <img src="picture/font-page/新品上市-山葵.svg" alt="山葵">
+            </div>
+            <div class="name">
+                <span>山葵</span>
+            </div>
+        </div>
+
+        <div class="new_product new_product_fourth">
+            <div class="pic">
+                <img src="picture/font-page/新品上市-辣椒巧克力.svg" alt="辣椒巧克力">
+            </div>
+            <div class="name">
+                <span>辣椒巧克力</span>
+            </div>
+        </div>
+
+        <div class="new_product new_product_fifth">
+            <div class="pic">
+                <img src="picture/font-page/新品上市-南瓜派.svg" alt="南瓜派">
+            </div>
+            <div class="name">
+                <span>南瓜派</span>
+            </div>
+        </div>
+
+        <div class="new_product new_product_sixth">
+            <div class="pic">
+                <img src="picture/font-page/新品上市-葡萄柚琴酒.svg" alt="葡萄柚琴酒">
+            </div>
+            <div class="name">
+                <span>葡萄柚琴酒</span>
+            </div>
+        </div>
+
+        <div class="new_product new_product_sixth">
+            <div class="pic">
+                <img src="picture/font-page/新品上市-黑糖棟奶茶.svg" alt="黑糖棟奶茶">
+            </div>
+            <div class="name">
+                <span>黑糖凍奶茶</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 關於我們 -->
+<div class="font_page_about_block">
+    <div class="font_page_about">
+        <div class="page_about_txt">
+            <h3>關於我們</h3>
+            <p>MOCA是一家台灣自製的法式馬卡龍甜點店，由來自法國的糕點師Raphaël所創立。我們的馬卡龍甜點融合了法國經典的糕點製作技巧與台灣獨特的口味，讓您品嚐到別具風味的美味。每一款馬卡龍都是由我們的糕點師KAY親自製作，堅持採用最優質的食材和嚴謹的製作流程，確保每一顆馬卡龍都是完美無瑕的。MOCA為您呈現法國經典甜點與台灣創意美食的完美結合，期待與您分享這份美味和獨特的文化風情
+            <br><br>
+                當您來到MOCA的甜點店時，您會發現我們的每一款馬卡龍都是經過精心製作而成。我們的馬卡龍甜點具有多種口味和風味，讓您可以盡情地品嚐不同的口感和滋味，包括榛果巧克力、抹茶、水果、焦糖等。我們也不斷推出新口味和季節限定款式，以滿足您的味蕾體驗</p>
+        </div>
+
+        <div class="page_about_pic">
+                <img src="picture/font-page/page_about_pic.svg" height="630" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- 更多關於我們 -->
+<div class="font_page_about_more">
+    <div class="font_page_about_more_first">
+        <h3>了解更多關於MOCA</h3>
+        <p>2014 年， Raphaël 創建了 MOCA <br> <br> MOCA的靈感源於法國的美術館Musee d'Orsay（奧賽美術館）,也可以被解讀為"Modern and Creative Art"（現代與創意藝術），這反映了我們對於馬卡龍創新和獨特性的追求。每一款MOCA的馬卡龍都是糕點師Raphaël的創意心血結晶，通過結合傳統和當代元素，呈現出一種全新的糕點體驗</p>
+        <div class="about_more_circle_pic_first"></div>
+    </div>
+
+    <div class="font_page_about_more_second">
+        <h3>了解更多關於法國廚師</h3>
+        <p>為什麼選擇台灣？<br><br>這個小島上有著無數傳統美味和創新口味的糕點，而我們相信MOCA的獨特法式馬卡龍甜點將為台灣的糕點愛好者帶來全新的饗宴。在這個融合東西方文化的寶島上，MOCA將展示法式糕點的精髓，同時結合當地的風味和特色，打造出獨一無二的馬卡龍口味</p>
+        <div class="about_more_circle_pic_second"></div>
+    </div>
+
+    <div class="font_page_about_more_third">
+        <h3>了解更多關於法國廚師</h3>
+        <p>烘焙對你的意義為何？<br><br>烘焙對我來說具有深遠的意義。它是我表達創造力和獨特風格的途徑。每一次揉捏麵團、調配材料的過程都能帶給我平靜和放鬆的感覺。烘焙是我追求美食的熱情和享受的方式，一個能夠用味道觸動人心的藝術。</p>
+        <div class="about_more_circle_pic_third"></div>
+    </div>
+</div>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer_block">
+        <div class="footer_logo">
+            <img src="picture/share/logo_2.svg">
+        </div>
+
+        <div class="footer_content">
+            <span class="footer_contact"><b>Contact</b></span>
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-phone"></i><span>0800-527-527</span>
+            </div>
+
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-envelope"></i><span>service@maca.com</span>
+            </div>
+
+            <div class="footer_content_icon">
+            <i class="fa-solid fa-clock"></i><span>週一 ~ 週五 09:00~18:00,六日與國定假日除外</span>
+            </div>
+        </div>
+
+        <div class="footer_icon">
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-line"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- js-輪播 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="owl/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+        items:1
+        },
+        600:{
+            items:4
+        },
+        
+ }
+});
+    });
+</script>
+
+
+</body>
+</html>
