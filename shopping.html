@@ -133,14 +133,32 @@
         
     }
 
+    .prouduct_pic{  /*新增*/
+        display: inline-block;
+        position: relative;
+    }
+
     .shopping_product img{
         width: 100%;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.5s ease-in-out;
     }
 
     .shopping_product img:hover{
-        transform: translateY(-20px) rotate(-15deg);
+        animation: hover-jump 0.5s ease-in-out infinite;
     }
+
+        @keyframes hover-jump {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+    }
+
 
     .shopping_product .quantity{
         display: flex;
