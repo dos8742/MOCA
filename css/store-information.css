@@ -1,0 +1,571 @@
+*{
+    padding:0px;
+    margin: 0px;
+    font-size: 18px;
+    color: black;
+    font-family: 'Nunito Sans', sans-serif;
+}
+/* ----------------------------------------- */
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    list-style-type: none;
+}
+
+nav li a{
+    text-decoration: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header img{
+    vertical-align: top;
+}
+
+.header .icon i{
+    font-size: 24px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+nav li { /*以下是nav-item動畫*/
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+  
+nav li:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #672E45;
+    transition: width 0.3s;
+}
+
+nav li:hover:before {
+    width: 100%;
+}
+
+#menu_control,.menu_btn{
+    display: none;
+}
+/* ----------------------------------------- */
+/*  background*/
+.banner{
+    position: relative;
+    width: 100%;
+    margin-top: 84px;
+}
+
+.banner-pic img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.banner-txt{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.banner-txt h1{
+    font-size: 52px;
+}
+/* ----------------------------------------- */
+/* 門市據點 */
+.store_info{
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+}
+
+.store_info_map{
+    width: 50%
+}
+
+.store_info_map img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.store_info_address{
+    width: 50%;
+    height: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.store_info_address select{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.address_sort a{
+    text-decoration: none;
+}
+
+.address_sort span{
+    display: inline-block;
+}
+
+.address_sort .adress{
+    display: grid;
+    grid-template-columns: 0.4fr 1.0fr 2fr;
+}
+
+.address_sort li{
+    list-style-type: none;
+}
+
+.address_sort li i {
+    text-align: center;
+    color: red;
+    text-align: start;
+    font-size: 24px;
+}
+
+.store_info_address .address_sort{
+    display: grid;
+    gap: 40px;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+/* ----------------------------------------- */
+/* Join our newsletter */
+.join-our-newsletter{
+    background-color: #672E45;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 200px;
+    justify-content: space-around;
+
+}
+
+.newletter-title h2{
+    text-align: center;
+    font-size: 44px;
+    color: #fff;
+}
+
+.newsletter-text{
+    display: flex;    
+}
+
+.newsletter-text p{
+    width: 250px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.newsletter-text i {
+    font-size: 80px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    transform: rotate(-15deg);
+}
+
+.newsletter-input p{
+    max-width: 520px;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.newsletter-input input{
+    background-color:rgba(255, 255, 255, 0.5); 
+    border: 1px solid #fff;
+    padding: 15px;
+    width: 350px;
+}
+
+.newsletter-input input::placeholder{
+    color: #fff;  
+}
+
+.newsletter-input button{
+    padding: 15px;
+    box-sizing: border-box;
+}
+/* ----------------------------------------- */
+/* footer */
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo img{
+    vertical-align: top;
+}
+
+.footer-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+.footer-logo{
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.brand,.help,.more-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info h3{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.footer-info a{
+    text-decoration: none;
+    line-height: 40px;
+}
+
+.follow-us a{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.follow-us i{
+    font-size: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+.toggle-icon{
+    display: none;
+}
+/* ----------------------------------------- */
+/* TOP鍵 */
+button img{
+    vertical-align: top;
+    width: 50px;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 50px; 
+    background:none;
+    cursor: pointer; 
+    opacity: 0.5;
+    border: none;
+    z-index: 1;
+}
+  #myBtn:hover {
+    opacity:0.8; 
+}
+/* -----------------------------媒體查詢----------------------------- */
+@media screen and (max-width:768px){
+     /* header-漢堡 */
+     #menu_control{
+        position: absolute;
+    }
+
+    .header{
+        position: relative;
+    }
+
+    .header .icon {
+        margin-left: auto;
+        display: flex;
+    }
+    
+    .menu_btn{
+        position: relative; 
+        width: 40px;
+        height: 40px;
+        display: block;
+        cursor: pointer;
+    }
+    
+    .menu_btn span{
+        width: 1px;
+        height: 1px;
+    }
+    
+    .menu_btn::before{
+        content:'';
+        position: absolute;
+        height: 2px;
+        left: 2px;
+        width: 36px;
+        background-color:black;
+        top:0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0px 8px 0px black,0px -8px 0px black;
+    }
+    
+    nav{
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav li a{
+        display: block;
+        padding: 10px 20px;
+        border-bottom: 2px solid #672E45;
+    }
+    
+    #menu_control:checked ~ .header nav{
+        left: 0;
+    }
+
+    /* header-icon */
+    .header .icon i{
+        font-size: 18px;
+        padding: 5px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+     /* header-img */
+    .header .logo img{
+        width: 60%;
+    }
+
+    /* header- li動畫 */
+    li:before {
+        display: none;
+    }
+/* ----------------------------------------- */
+    /* background */
+    .banner{
+        margin-top: auto;
+    }
+    
+    .banner-txt{
+        width: 250px;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .banner-txt h1{
+        font-size: 18px;
+    }
+/* ----------------------------------------- */
+    /* 門市據點 */
+    .store_info{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .store_info_map{
+        width: 100%;
+    }
+
+    .store_info_address{
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .address_sort li a i, .address_sort li span{
+        align-self: center;
+    }
+
+    .store_info_address select{
+        font-size: 16px;
+        padding: 10px;
+        margin-left: -10px;
+    }
+
+    .store_info_address select option{
+        font-size: 16px;
+    }
+
+    .address_sort li i {
+        font-size: 16px;
+    }
+
+    .address_sort span{
+        font-size: 14px;
+    }
+
+    .address_sort .adress{
+        grid-template-columns: 0.2fr 1fr 1.5fr;
+    }
+/* ----------------------------------------- */
+     /* Join our newsletter */
+     .join-our-newsletter{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+
+    .newletter-title,.newsletter-text,.newsletter-input{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .newletter-title h2{
+        font-size: 22px;
+        line-height: 40px;
+    }
+
+    .newsletter-text i{
+        font-size: 50px;
+    }
+
+    .newsletter-text p{
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .join-our-newsletter .newsletter-text{
+        margin-top: 20px;
+    }
+
+    /* subscribe */
+    .newsletter-input input{
+        width: 230px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .newsletter-input button{
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .newsletter-input p{
+        font-size: 14px;
+        max-width: 330px;
+        margin: auto;
+        margin-top: 10px;
+        line-height: 30px;
+    }
+
+    .newsletter-input form{
+        text-align: center;
+    }
+/* ----------------------------------------- */
+    /* footer */
+    .footer-info{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    .footer-info .brand,.footer-info .help,.footer-info .more-info,.footer-info .follow-us{  
+        width: 100%;
+    }
+    
+    footer .footer-info h3{
+        font-size: 20px;
+    }
+
+    footer .footer-info a span b{
+        font-size: 14px;
+    }
+
+    .footer-logo img{
+        width: 80%;
+    }
+
+    .footer-logo{
+        text-align: center;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .footer-info .toggle ~ a {
+        display: none;
+    }
+
+    .footer-info .toggle.active + a {
+        display: block; 
+    }
+
+    .toggle {
+        cursor: pointer;
+    }
+
+    .toggle-icon{
+        display: inline;
+        float: right;
+    }
+
+    footer h3{
+        border-bottom: 1px solid black;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    footer a{
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .links-wrapper{
+        display: flex;
+    }
+
+    .follow-us .links-wrapper a{
+        display: none;
+    }
+/* ----------------------------------------- */
+    /* TOP鍵 */
+    #myBtn { 
+        bottom: 10px; 
+        right: 10px;  
+      }
+
+}
+
+
+
+
+
+
+
+
+
+

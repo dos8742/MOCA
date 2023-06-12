@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-list</title>
+    <!-- css-link -->
+    <link rel="stylesheet" href="css/product-list.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Inter:wght@100;400&family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<!------------------------------------------------------------->
+<body>
+<!-- header -->
+<input type="checkbox" name="" id="menu_control"> 
+<header class="header">
+    <div class="logo">
+        <a href="index.html"><img src="image/common/logo-pink.svg" alt="logo"></a>
+    </div>
+
+    <nav>
+        <li><a href="latest-news.html">LATEST NEWS</a></li>
+        <li><a href="product-list.html">PRODUCT LIST</a></li>
+        <li><a href="store-information.html">STORE INFORMATION</a></li>
+        <li><a href="contact-us.html">CONTACT US</a></li>
+    </nav>
+
+    <div class="icon">
+        <a href="member.html"><i class="fa-solid fa-user"></i></a>
+        <a href="add-to-cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+    <label for="menu_control" class="menu_btn">
+        <span></span>
+    </label>
+</header>
+<!------------------------------------------------------------->
+<!-- background -->
+<div class="banner">
+    <div class="banner-pic">
+        <img src="image/product-list/bgc.png" alt="banner">
+    </div>
+    <div class="banner-txt">
+        <h1>PRODUCT LIST</h1>
+    </div>
+</div>
+<!------------------------------------------------------------->
+<!-- 產品項目 -->
+<div class="shopping_product_block">
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro1')">
+            <img src="image/product-list/Irish-coffee.png" alt="Irish-coffee">
+        </div>
+        <div class="product_name">
+            <span>Irish Coffee</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro1">
+            <h3>Irish Coffee</h3>
+            <p>The perfect combination of whiskey's aroma and coffee, don't forget the whipped cream as the icing on the cake.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond flour, sugar, egg whites, coffee powder.</p>
+            <h6>Filling Ingredients</h6>
+            <p>French white chocolate, whipped cream, French AOP whipped cream, coffee powder, Irish whiskey.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, protein, dairy.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>
+    </div>
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro2')">
+            <img src="image/product-list/banana-strawberry.png" alt="banana-strawberry">
+         </div>
+        <div class="product_name">
+             <span>Banana Strawberry</span>
+         </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+         </div>
+         <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>        
+        </div>
+        <div class="product_intro" id="productIntro2">
+            <h3>Banana Strawberry</h3>
+            <p>Two fruity fruits that turn into a rush of aroma on the tip of the tongue.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond Flour, Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>French white chocolate, banana puree, French whipped cream, French AOP cream, strawberry puree, sugar, pectin.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>
+    </div>
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro3')">
+            <img src="image/product-list/latte.png" alt="latte">
+        </div>
+        <div class="product_name">
+            <span>Latté</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro3">
+            <h3>Latté</h3>
+            <p>The nutty flavor of almond flour on the crust and the aroma of coffee are definitely an alluring combination.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond flour, sugar, egg whites, coffee powder.</p>
+            <h6>Filling Ingredients</h6>
+            <p>French AOP cream, powdered sugar, ground almonds, coffee powder.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, protein, dairy.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>
+    </div>
+    
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro4')">
+            <img src="image/product-list/mint-chocolate.png" alt="mint-chocolate">
+        </div>
+        <div class="product_name">
+            <span>Mint Chocolate</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro4">
+            <h3>Mint Chocolate</h3>
+            <p>Classic mint chocolate, a combination that lasts for centuries.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Cocoa Powder, Almond Flour, Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>French milk chocolate, French whipped cream, mint liquor, fresh mint leaves, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>
+    </div>
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro5')">
+            <img src="image/product-list/cherry-chocolate.png" alt="cherry-chocolate">
+        </div>
+        <div class="product_name">
+            <span>Cherry Chocolate</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro5">
+            <h3>Cherry Chocolate</h3>
+            <p>Chocolate ganache and cherry jam, bittersweet chocolate and rich cherry brandy aroma, the perfect combination of classic and fruity.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond Flour, Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Cherry liqueur, pepper, milk chocolate, French crème fraiche, French AOP cream, cherry puree, sugar, pectin.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, dairy products, egg whites, food coloring, alcohol.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>
+    </div>
+
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro6')">
+            <img src="image/product-list/earl-grey.png" alt="earl-grey">
+        </div>
+        <div class="product_name">
+            <span>Earl Grey</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro6">
+            <h3>Earl Grey</h3>
+            <p>The aroma of tea neutralizes the sweetness of chocolate, the entrance is rich and rich, and the aroma of tea returns to rhyme.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond Flour, Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>British Earl Gray black tea, French milk chocolate, French 66% chocolate, French fresh cream, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>
+    </div>
+    
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro7')">
+            <img src="image/product-list/red-velvet.png" alt="red-velvet">
+        </div>
+        <div class="product_name">
+            <span>Red Velvet</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro7">
+            <h3>Red Velvet</h3>
+            <p>The cream cheese filling is added with vanilla extract to enhance the flavor and smoothness of the entrance.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond Flour, Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Cream cheese, vanilla extract, powdered sugar, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>
+    </div>
+    
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro8')">
+            <img src="image/product-list/rose.png" alt="rose">
+        </div>
+        <div class="product_name">
+            <span>Rose</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro8">
+            <h3>Rose</h3>
+            <p>Lebanese natural rose water, filled with rose aroma.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond Flour, Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Natural rose water, white chocolate, French fresh cream, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>
+    </div>
+    
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro9')">
+            <img src="image/product-list/matcha.png" alt="matcha">
+        </div>
+        <div class="product_name">
+            <span>Matcha</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro9">
+            <h3>Matcha</h3>
+            <p>With 2 different flavors of matcha powder, the filling is naturally fragrant, and the taste of the tea is sweet and rich.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Japanese Ise matcha powder, almond powder, sugar, egg white.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Japanese Uji matcha powder, white chocolate, French fresh cream, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>
+    </div>
+    
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro10')">
+            <img src="image/product-list/milk-tea.png" alt="milk-tea">
+        </div>
+        <div class="product_name">
+            <span>Milk Tea</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro10">
+            <h3>Milk Tea</h3>
+            <p>The aroma of tea and milk is fused, and the rich tea aroma slowly spreads between the lips and tongue. After entering the throat, the aroma of milk spreads, which is endless aftertaste.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond Flour, Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Black tea, white chocolate, French whipped cream, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>    
+    </div>
+    
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro11')">
+            <img src="image/product-list/lavender.png" alt="lavender">
+        </div>
+        <div class="product_name">
+            <span>Lavender</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro11">
+            <h3>Lavender</h3>
+            <p>The taste of fresh lavender and chocolate is very delicate and smooth, and the aroma of lavender is rich and has a aftertaste.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond flour, sugar, egg whites, food coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Lavender, Belgian white chocolate, French crème fraiche, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, protein, dairy, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>    
+    </div>
+    
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro12')">
+            <img src="image/product-list/lime-basil.png" alt="lime-basil">
+        </div>
+        <div class="product_name">
+            <span>Lime Basil</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro12">
+            <h3>Lime Basil</h3>
+            <p>The fresh and rich lime juice and fresh basil leaves echo back and forth in the aroma, with a lively and refreshing taste.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond Flour, Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Lime juice, fresh lime peel, fresh basil leaves, Belgian white chocolate, French whipped cream, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>   
+    </div>
+    
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro13')">
+            <img src="image/product-list/port-wine.png" alt="port-wine">
+        </div>
+        <div class="product_name">
+            <span>Port Wine</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro13">
+            <h3>Port Wine</h3>
+            <p>Port wine is paired with Sichuan peppercorns.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond flour, sugar, egg whites, food coloring, sugar beads.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Port wine, pepper, milk chocolate, French crème fraiche, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring, alcohol.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>   
+    </div>
+    
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro14')">
+            <img src="image/product-list/Bailey's-liqueur.png" alt="Bailey's-liqueur">
+        </div>
+        <div class="product_name">
+            <span>Bailey's Liqueur</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro14">
+            <h3>Bailey's Liqueur</h3>
+            <p>Bailey's milk wine is paired with fresh bananas, which has a unique and mellow flavor.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond flour, sugar, egg whites, food coloring, sugar beads.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Bailey's milk wine, banana, 66% chocolate, French whipped cream, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>   
+    </div>
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro15')">
+            <img src="image/product-list/Cointreau-Orange -Wine.png" alt="Cointreau-Orange -Wine">
+        </div>
+        <div class="product_name">
+            <span>Orange Wine</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro15">
+            <h3>Cointreau Orange Wine</h3>
+            <p>Light orange aroma with dark chocolate, sweet taste.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond flour, sugar, egg whites, food coloring, sugar beads.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Cointreau, orange, 66% chocolate, French crème fraiche, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring, alcohol.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>   
+    </div>
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro16')">
+            <img src="image/product-list/Kaluwa-coffee-wine.png" alt="Kaluwa-coffee-wine">
+        </div>
+        <div class="product_name">
+            <span>Kaluwa Coffee Wine</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro16">
+            <h3>Kaluwa Coffee Wine</h3>
+            <p>A touch of vanilla fragrance is added to the coffee wine, and the mouth is refreshing and full of aroma.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond flour, sugar, egg whites, food coloring, sugar beads.</p>
+            <h6>Filling Ingredients</h6>
+            <p>66% chocolate, Kaluwa liqueur, coffee, French whipped cream, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring, alcohol.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>   
+    </div>
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro17')">
+            <img src="image/product-list/champagne-cognac.png" alt="champagne-cognac">
+        </div>
+        <div class="product_name">
+            <span>Champagne Cognac</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro17">
+            <h3>Champagne Cognac</h3>
+            <p>The stuffing is mixed with seven kinds of unique spices, the spices are pungent, and the wine is mellow, which is different from the taste of direct wine tasting.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond flour, sugar, egg whites, food coloring, sugar beads.</p>
+            <h6>Filling Ingredients</h6>
+            <p>VSOP, spices, Belgian white chocolate, French crème fraiche, French AOP crème fraiche.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring, alcohol.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>   
+    </div>
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro18')">
+            <img src="image/product-list/kavalan-whisky.png" alt="kavalan-whisky">
+        </div>
+        <div class="product_name">
+            <span>Kavalan Whisky</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro18">
+            <h3>Kavalan Whisky</h3>
+            <p>The aroma of vanilla and milk is paired with Kavalan single malt whiskey for a full-bodied drink.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond flour, sugar, egg whites, food coloring, sugar beads.</p>
+            <h6>Filling Ingredients</h6>
+            <p>Kavalan whiskey, Madagascar vanilla, Belgian white chocolate, French crème fraiche, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, egg whites, dairy products, food coloring, alcohol.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>   
+    </div>
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro19')">
+            <img src="image/product-list/whisky-caramel.png" alt="whisky-caramel">
+        </div>
+        <div class="product_name">
+            <span>Caramel Whisky</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro19">
+            <h3>Caramel Whisky</h3>
+            <p>Full-bodied Taiwanese Kavalan whiskey with hints of vanilla.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond Flour, Sugar, Powdered Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>French AOP Cream, French Cream, Sugar, Flower of Salt, Madagascar Vanilla, Kavalan Whiskey.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, protein, dairy, food coloring.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>   
+    </div>
+
+    <div class="shopping_product">
+        <div class="prouduct_pic" onclick="showProductIntro('productIntro20')">
+            <img src="image/product-list/Lime-Vodka.png" alt="Lime-Vodka">
+        </div>
+        <div class="product_name">
+            <span>Lime Vodka</span>
+        </div>
+        <div class="product_price">
+            <span>NTD 80</span>
+        </div>
+        <div class="product_addtocart">
+            <form action="">
+                <div class="quantity">
+                    <button class="minus" type="button"><i class="fa-solid fa-minus"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus" type="button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <div class="addtocart">
+                <button class="car" type="button">ADD TO CART</button>
+                </div>
+            </form>   
+        </div>
+        <div class="product_intro" id="productIntro20">
+            <h3>Lime Vodka</h3>
+            <p>Clear Caribbean skies, vodka, blue clementines, and lemonade meld into macarons you'll want to dive into.</p>
+            <h6>Cookie Ingredients</h6>
+            <p>Almond Flour, Sugar, Powdered Sugar, Egg Whites, Food Coloring.</p>
+            <h6>Filling Ingredients</h6>
+            <p>White chocolate, French crème fraiche, vodka, curacao, fresh lemon zest, fresh orange zest, French AOP cream.</p>
+            <h6>Allergens</h6>
+            <p>Nuts, dairy products, protein, food coloring, alcohol.</p>
+            <button class="close-button" onclick="hideProductIntro()">&times;</button>
+        </div>
+        <div class="background-layer" id="backgroundLayer"></div>   
+    </div>
+</div>
+<!------------------------------------------------------------->
+<!-- Join our newsletter -->
+<div class="join-our-newsletter">
+    <div class="newletter-title">
+        <h2>Join our <br> newsletter</h2>
+    </div>
+    <div class="newsletter-text">
+        <i class="fa-solid fa-envelopes-bulk"></i>
+        <p>Enter the world of Ladurée: news, gourmet creations and latest events in stores.</p>
+    </div>
+    <div class="newsletter-input">
+        <form>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+        <p>Your email address is used by MOCA, as the data controller, for commercial prospecting purposes (new products, news, services...). To find out about our Personal Data Policy and to learn more about your rights, please visit the Personal Data Protection page.</p>
+    </div>
+</div>
+<!------------------------------------------------------------->
+<!-- footer -->
+<footer>
+    <div class="footer-logo">
+      <img src="image/common/logo-pink.svg" alt="logo">
+    </div>
+
+    <div class="footer-info">
+        <div class="brand">
+            <h3 class="toggle">MOCA<span class="toggle-icon">+</span> </h3>
+            <a href=""><span><b>Macarons</b></span></a>
+        </div>
+
+        <div class="help">
+            <h3 class="toggle">Help<span class="toggle-icon">+</span> </h3>
+            <a href=""><span><b>Contact us</b></span></a>
+            <a href=""><span><b>Customer service</b></span></a>
+            <a href=""><span><b>Sales department</b></span></a>
+            <a href=""><span><b>Store Locator</b></span></a>
+            <a href=""><span><b>FAQ</b></span></a>
+        </div>
+
+        <div class="more-info">
+            <h3 class="toggle">More information<span class="toggle-icon">+</span> </h3>
+            <a href=""><span><b>Our News</b></span></a>
+            <a href=""><span><b>Terms and conditions</b></span></a>
+            <a href=""><span><b>Legal Notice</b></span></a>
+            <a href=""><span><b>Protection of personal data</b></span></a>
+            <a href=""><span><b>Maison MOCA</b></span></a>
+            <a href=""><span><b>Join us</b></span></a>
+        </div>
+
+        <div class="follow-us">
+            <h3 class="toggle">FOLLOW US<span class="toggle-icon">+</span> </h3>
+            <div class="links-wrapper">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!------------------------------------------------------------->
+<!-- TOP鍵 -->
+<button onclick="topFunction()" id="myBtn" title="Gotop"><img src="image/common/TOP.png"></button>
+<!------------------------------------------------------------->
+<!-- JS -->
+<script src="js/product-list.js"></script>
+
+</body>
+</html>
+
+

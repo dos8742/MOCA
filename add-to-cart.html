@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add-to-cart</title>
+    <!-- css-link -->
+    <link rel="stylesheet" href="css/add-to-cart.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Inter:wght@100;400&family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<!------------------------------------------------------------->
+<body>
+<!-- header -->
+<input type="checkbox" name="" id="menu_control"> 
+<header class="header">
+    <div class="logo">
+        <a href="index.html"><img src="image/common/logo-pink.svg" alt="logo"></a>
+    </div>
+
+    <nav>
+        <li><a href="latest-news.html">LATEST NEWS</a></li>
+        <li><a href="product-list.html">PRODUCT LIST</a></li>
+        <li><a href="store-information.html">STORE INFORMATION</a></li>
+        <li><a href="contact-us.html">CONTACT US</a></li>
+    </nav>
+
+    <div class="icon">
+        <a href="member.html"><i class="fa-solid fa-user"></i></a>
+        <a href="add-to-cart.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+    </div>
+
+    <label for="menu_control" class="menu_btn">
+        <span></span>
+    </label>
+</header>
+<!------------------------------------------------------------->
+<!-- background -->
+<div class="banner">
+    <div class="banner-pic">
+        <img src="image/add-to-cart/bgc.png" alt="banner">
+    </div>
+    <div class="banner-txt">
+        <h1>SHOPPING CART</h1>
+    </div>
+</div>
+<!------------------------------------------------------------->
+<!-- 購物車_流程 -->
+<div class="addtocart_process">
+    <span class="process_first">SHOPPING CART</span>
+    <span class="process_second">PROVIDE THE INFORMATION</span>
+    <span class="process_third">ORDER CONFIRMATION</span>
+</div>
+<!------------------------------------------------------------->
+<!-- 購物車_項目 -->
+<div class="product_label">
+    <span>ITEM</span>
+    <span>PRICE</span>
+    <span>QUANTITY</span>
+    <span>SUBTOTAL</span>
+</div>
+
+<div class="product_items">
+    <div class="product_name">
+        <img src="image/add-to-cart/Lime-Vodka.png" alt="Lime Vodka">
+        <span>Lime Vodka</span>
+    </div>
+
+    <div class="product_pirce">
+        <span>NTD 80</span>
+    </div>
+
+    <div class="product_quantity">
+        <div class="quantity_button">
+            <form action="">
+                <button><i class="fa-solid fa-minus"></i></button>
+                <span>1</span>
+                <button><i class="fa-solid fa-plus"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="product_amount">
+        <span>NTD 80</span>
+    </div>
+
+    <div class="product_cancel">
+        <form action="">
+        <button><i class="fa-solid fa-xmark"></i></button>
+        </form>
+    </div>
+</div>
+
+<div class="product_items">
+    <div class="product_name">
+        <img src="image/add-to-cart/Cointreau-Orange-Wine.png" alt="Cointreau Orange Wine">
+        <span>Orange Wine</span>
+    </div>
+
+    <div class="product_pirce">
+        <span>NTD 80</span>
+    </div>
+
+    <div class="product_quantity">
+        <div class="quantity_button">
+            <form action="">
+                <button><i class="fa-solid fa-minus"></i></button>
+                <span>1</span>
+                <button><i class="fa-solid fa-plus"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="product_amount">
+        <span>NTD 80</span>
+    </div>
+
+    <div class="product_cancel">
+        <form action="">
+        <button><i class="fa-solid fa-xmark"></i></button>
+        </form>
+    </div>
+</div>
+<!------------------------------------------------------------->
+<!-- 選擇送貨及付款方式 & 訂單資訊 -->
+<div class="addtocart_pay">
+    <div class="addtocart_choose_pay">
+        <div class="pay_title">
+            <span>SELECT DELIVERY AND PAYMENT OPTIONS</span>
+        </div>
+
+        <div class="pay_transport">
+            <span>Delivery Method</span>
+            <select name="choose_transport" id="choose_transport">
+                <option value="all">Please select the delivery method</option>
+                <option value="7-11">7-11</option>
+                <option value="familymart">FamilyMart</option>
+                <option value="lerfu">Hi-Life</option>
+                <option value="home_delivery">Home Delivery</option>
+            </select>
+        </div>
+
+        <div class="pay_payment">
+            <span>PAYMENT METHOD</span>
+            <select name="choose_payment" id="choose_payment">
+                <option value="all">Please select the payment method</option>
+                <option value="supermarket">Pickup at Convenience Store</option>
+                <option value="home_delivery">Cash on Delivery</option>
+                <option value="atm">ATM Transfer</option>
+                <option value="credit_card">Credit Card Payment</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="addtocart_order">
+        <div class="order_title">
+            <span><b>ORDER INFORMATION</b></span>
+        </div>
+
+        <div class="order_info">
+            <div>
+                <span>SUBTOTAL</span>
+                <span>NTD 160</span>
+            </div>
+
+            <div>
+                <span>SHIPPING</span>
+                <span>NTD 80</span>
+            </div>
+
+            <div>
+                <span><b>TOTAL</b></span>
+                <span><b>NTD 240</b></span>
+            </div>
+        </div>
+
+        <div class="order_checkout">
+            <div class="order_checkout_button">
+                <form action="">
+                    <button type="submit">CHECKOUT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------->
+<!-- 宅配服務、線上支付、保存與食用 -->
+<div class="addtocart_precautions_block">
+    <div class="addtocart_precautions">
+        <div class="delivery_service">
+            <div class="delivery_service_title">
+                <i class="fa-solid fa-truck"></i>
+                <span>HOME DELIVERY SERVICE</span>
+            </div>
+            <div class="delivery_service_txt">
+                <p>FREE SHIPPING on orders over NT2000<br>Frozen Delivery<br>Tuesday to Saturday<br>Black Cat Express Delivery</p>
+            </div>
+        </div>
+
+        <div class="online_payment">
+            <div class="online_payment_title">
+                <i class="fa-regular fa-credit-card"></i>
+                <span>ONLINE PAYMENT</span>
+            </div>
+            <div class="online_payment_txt">
+                <p>Credit Card<br>ATM Transfer</p>
+            </div>
+        </div>
+
+        <div class="save_food">
+            <div class="save_food_title">
+                <i class="fa-solid fa-snowflake"></i>
+                <span>STORE AND CONSUME</span>
+            </div>
+            <div class="save_food_txt">
+                <p>7 days refrigeration, 30 days freezing<br>Reheat for 30 minutes before consumption</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------------->
+<!-- Join our newsletter -->
+<div class="join-our-newsletter">
+    <div class="newletter-title">
+        <h2>Join our <br> newsletter</h2>
+    </div>
+    <div class="newsletter-text">
+        <i class="fa-solid fa-envelopes-bulk"></i>
+        <p>Enter the world of Ladurée: news, gourmet creations and latest events in stores.</p>
+    </div>
+    <div class="newsletter-input">
+        <form>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+        <p>Your email address is used by MOCA, as the data controller, for commercial prospecting purposes (new products, news, services...). To find out about our Personal Data Policy and to learn more about your rights, please visit the Personal Data Protection page.</p>
+    </div>
+</div>
+<!------------------------------------------------------------->
+<!-- footer -->
+<footer>
+    <div class="footer-logo">
+      <img src="image/common/logo-pink.svg" alt="logo">
+    </div>
+
+    <div class="footer-info">
+        <div class="brand">
+            <h3 class="toggle">MOCA<span class="toggle-icon">+</span> </h3>
+            <a href=""><span><b>Macarons</b></span></a>
+        </div>
+
+        <div class="help">
+            <h3 class="toggle">Help<span class="toggle-icon">+</span> </h3>
+            <a href=""><span><b>Contact us</b></span></a>
+            <a href=""><span><b>Customer service</b></span></a>
+            <a href=""><span><b>Sales department</b></span></a>
+            <a href=""><span><b>Store Locator</b></span></a>
+            <a href=""><span><b>FAQ</b></span></a>
+        </div>
+
+        <div class="more-info">
+            <h3 class="toggle">More information<span class="toggle-icon">+</span> </h3>
+            <a href=""><span><b>Our News</b></span></a>
+            <a href=""><span><b>Terms and conditions</b></span></a>
+            <a href=""><span><b>Legal Notice</b></span></a>
+            <a href=""><span><b>Protection of personal data</b></span></a>
+            <a href=""><span><b>Maison MOCA</b></span></a>
+            <a href=""><span><b>Join us</b></span></a>
+        </div>
+
+        <div class="follow-us">
+            <h3 class="toggle">FOLLOW US<span class="toggle-icon">+</span> </h3>
+            <div class="links-wrapper">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!------------------------------------------------------------->
+<!-- TOP鍵 -->
+<button onclick="topFunction()" id="myBtn" title="Gotop"><img src="image/common/TOP.png"></button>
+<!------------------------------------------------------------->
+<!-- JS -->
+<script src="js/add-to-cart.js"></script>
+
+</body>
+</html>

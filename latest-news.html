@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>會員專區測試</title>
+    <title>latest-news</title>
     <!-- css-link -->
-    <link rel="stylesheet" href="css/member.css">
+    <link rel="stylesheet" href="css/latest-news.css">
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- google-font -->
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Great+Vibes&family=Inter:wght@100;400&family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
-<!--------------------------------------------------------->
+<!------------------------------------------------------->
 <body>
 <!-- header -->
 <input type="checkbox" name="" id="menu_control"> 
@@ -39,62 +39,53 @@
         <span></span>
     </label>
 </header>
-<!--------------------------------------------------------->
+<!------------------------------------------------------->
 <!-- background -->
 <div class="banner">
     <div class="banner-pic">
-        <img src="image/member/bgc.png" alt="banner">
+        <img src="image/latest-news/bgc.png" alt="banner">
     </div>
     <div class="banner-txt">
-        <h1>MEMBER PORTAL</h1>
+        <h1>LATEST NEWS</h1>
     </div>
 </div>
-<!--------------------------------------------------------->
-<!-- 會員登入 -->
-    <div class="member_content_block">
-        <div class="member_content_block_one">
-            <div class="member_content_title_one ">
-                <h2>LOGIN</h2>
-            </div>
-            <form action="">
-                <div class="member_content_account">
-                    <input type="text" placeholder="Please enter your phone number or email address.">
-                 </div>
-
-                <div class="member_content_password">
-                    <input type="password" placeholder="Please enter your password.">
-                </div>
-
-                <div class="member_content_forget_password">
-                    <a href="">Forgot password?</a>
-                </div>
-
-                <div class="member_content_login">
-                    <button class="login">LOGIN</button>
-                </div>
-
-                <div class="member_content_register">
-                    <button class="register">REGISTER</button>
-                </div>
-            </form>
-
+<!------------------------------------------------------->
+<!-- LATEST NEWS -->
+<div class="latest-news">
+    <div class="latest-news-block">
+        <div class="latest-news-pic" id="scrolling-image1">
+            <img src="image/latest-news/celebrate.png" alt="celebrate">
         </div>
-
-        <div class="member_content_block_two">
-            <div class="member_content_title_two ">
-                <h2>QUICK LOGIN</h2>
-            </div>
-
-            <div class="member_content_login_line">
-                <a href=""><i class="fa-brands fa-line"></i>LINE LOGIN</a>    
-            </div>
-
-            <div class="member_content_login_fb">
-                <a href=""><i class="fa-brands fa-square-facebook"></i>Facebook LOGIN</a>    
-            </div>
+        <div class="latest-news-text">
+            <h2>Embracing Diversity with the Rainbow Gift Box</h2>
+            <p>Celebrate the legalization of same-sex marriage! MOCA is launching the Rainbow Gift Box, where the diversity of love will shine brilliantly. Choose the Rainbow Gift Box and join us in celebrating equality and inclusivity, creating sweet memories. Let the radiance of love illuminate the world as we together foster a diverse and beautiful future!</p>
+            <a href="">READ MORE</a>
         </div>
     </div>
-<!--------------------------------------------------------->
+
+    <div class="latest-news-block">
+        <div class="latest-news-pic" id="scrolling-image2">
+            <img src="image/latest-news/make-macaron.png" alt="make-macaron">
+        </div>
+        <div class="latest-news-text">
+            <h2>A Journey of Macaron Making</h2>
+            <p>Unleash your creativity and make macarons from scratch! Join MOCA for an exciting hands-on event exploring the enchantment of desserts. Come together to create unique rainbow macarons and savor the joy of crafting delicious treats. Connect and inspire with fellow baking enthusiasts. Let your skills become stunning works of art! Join MOCA's macaron-making event and illuminate your baking journey with creativity!</p>
+            <a href="">READ MORE</a>
+        </div>
+    </div>
+
+    <div class="latest-news-block">
+        <div class="latest-news-pic" id="scrolling-image3">
+            <img src="image/latest-news/new-store.png" alt="new-store">
+        </div>
+        <div class="latest-news-text">
+            <h2>MOCA Taoyuan is about to open its doors</h2>
+            <p>MOCA is set to establish a new presence in Taoyuan, igniting the city with creativity! Get ready for an extraordinary art experience as our new branch takes shape. From captivating exhibitions to interactive workshops, MOCA Taoyuan will be a hub of inspiration and cultural enrichment. The perfect fusion of art and community awaits. Stay tuned for the grand opening and join us in welcoming a miracle of creativity!</p>
+            <a href="">READ MORE</a>
+        </div>
+    </div>
+</div>
+<!------------------------------------------------------->
 <!-- Join our newsletter -->
 <div class="join-our-newsletter">
     <div class="newletter-title">
@@ -112,7 +103,7 @@
         <p>Your email address is used by MOCA, as the data controller, for commercial prospecting purposes (new products, news, services...). To find out about our Personal Data Policy and to learn more about your rights, please visit the Personal Data Protection page.</p>
     </div>
 </div>
-<!--------------------------------------------------------->
+<!------------------------------------------------------->
 <!-- footer -->
 <footer>
     <div class="footer-logo">
@@ -154,12 +145,12 @@
         </div>
     </div>
 </footer>
-<!--------------------------------------------------------->
+<!------------------------------------------------------->
 <!-- TOP鍵 -->
 <button onclick="topFunction()" id="myBtn" title="Gotop"><img src="image/common/TOP.png"></button>
-<!--------------------------------------------------------->
+<!------------------------------------------------------->
 <!-- JS -->
-<script src="js/member.js"></script>
+<script src="js/latest-news.js"></script>
 
 
 </body>

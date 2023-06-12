@@ -1,0 +1,669 @@
+*{
+    padding:0px;
+    margin: 0px;
+    font-size: 18px;
+    color: black;
+    font-family: 'Nunito Sans', sans-serif;
+}
+/* ----------------------------------- */
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    list-style-type: none;
+}
+
+nav li a{
+    text-decoration: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header img{
+    vertical-align: top;
+}
+
+.header .icon i{
+    font-size: 24px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+li { /*以下是nav-item動畫*/
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+  
+li:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #672E45;
+    transition: width 0.3s;
+}
+
+li:hover:before {
+    width: 100%;
+}
+
+#menu_control,.menu_btn{
+    display: none;
+}
+/* ----------------------------------- */
+/*  background*/
+.banner{
+    position: relative;
+    width: 100%;
+    margin-top: 84px;
+}
+
+.banner-pic img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.banner-txt{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.banner-txt h1{
+    font-size: 52px;
+}
+/* ----------------------------------- */
+/* 聯絡我們_資訊 */
+.contact_info{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 130px;
+}
+
+
+.contact_info .contact_info_phone{
+    position: relative;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FFFFFF;
+    align-items: center;
+    font-weight: 700;
+}
+
+.contact_info .contact_info_mail{
+    position: relative;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FFFFFF;
+    align-items: center;
+    font-weight: 700;
+}
+
+.contact_info .contact_info_time{
+    position: relative;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FFFFFF;
+    align-items: center;
+    font-weight: 700;
+}
+
+.contact_info .contact_info_content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.contact_info_content .title{
+    margin-bottom: 50px;
+    color: #434343;
+}
+
+.contact_info_content .info{
+    color: #434343;
+}
+
+.contact_info_pic{
+    width: 100px;
+}
+
+.contact_info_pic img{
+    width: 100%;
+    vertical-align: top;
+}
+/* ----------------------------------- */
+/* 聯絡我們_填單 */
+.contact_form_write{
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contact_form_write form div label{
+    display: inline-block;
+    width: 300px;
+    font-weight: 700;
+}
+
+.contact_form_write form div input{
+    width: 900px;
+    padding:20px;
+    box-sizing: border-box;
+}
+
+.contact_form_write form .textarea textarea{
+    width: 900px;
+}
+
+.contact_form_write form .name,.contact_form_write form .tel,.contact_form_write form .email,.contact_form_write form .ask,.contact_form_write form .textarea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#textarea {
+    padding:20px;
+    box-sizing: border-box;
+    resize: horizontal;
+    resize: vertical;
+    resize: none;
+    
+}
+
+.contact_form_button{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact_form_button .reset button{
+    width: 250px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #DBE4D5;
+    font-weight: 700;
+}
+
+.contact_form_button .reset button:hover{
+    background-color: #FFFFFF;
+}
+
+.contact_form_button .submit button{
+    width: 250px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #672E45;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.contact_form_button .submit button:hover{
+    background-color: #FFFFFF;
+    color: black;
+}
+/* ----------------------------------- */
+/* Join our newsletter */
+.join-our-newsletter{
+    background-color: #672E45;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    justify-content: space-around;
+
+}
+
+.newletter-title h2{
+    text-align: center;
+    font-size: 44px;
+    color: #fff;
+}
+
+.newsletter-text{
+    display: flex;    
+}
+
+.newsletter-text p{
+    width: 250px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.newsletter-text i {
+    font-size: 80px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    transform: rotate(-15deg);
+}
+
+.newsletter-input p{
+    max-width: 520px;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.newsletter-input input{
+    background-color:rgba(255, 255, 255, 0.5); 
+    border: 1px solid #fff;
+    padding: 15px;
+    width: 350px;
+}
+
+.newsletter-input input::placeholder{
+    color: #fff;  
+}
+
+.newsletter-input button{
+    padding: 15px;
+    box-sizing: border-box;
+}
+/* ----------------------------------- */
+/* footer */
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo img{
+    vertical-align: top;
+}
+
+.footer-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+.footer-logo{
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.brand,.help,.more-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info h3{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.footer-info a{
+    text-decoration: none;
+    line-height: 40px;
+}
+
+.follow-us a{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.follow-us i{
+    font-size: 24px;
+}
+
+.toggle-icon{
+    display: none;
+}
+/* ----------------------------------- */
+/* TOP鍵 */
+button img{
+    vertical-align: top;
+    width: 50px;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 50px; 
+    background:none;
+    cursor: pointer; 
+    opacity: 0.5;
+    border: none;
+    z-index: 1;
+  }
+  #myBtn:hover {
+    opacity:0.8; 
+  }
+/* -----------------------------媒體查詢----------------------------- */
+@media screen and (max-width:768px){
+    /* header-漢堡 */
+    #menu_control{
+        position: absolute;
+    }
+
+    .header{
+        position: relative;
+    }
+
+    .header .icon {
+        margin-left: auto;
+        display: flex;
+    }
+    
+    .menu_btn{
+        position: relative; 
+        width: 40px;
+        height: 40px;
+        display: block;
+        cursor: pointer;
+    }
+    
+    .menu_btn span{
+        width: 1px;
+        height: 1px;
+    }
+    
+    .menu_btn::before{
+        content:'';
+        position: absolute;
+        height: 2px;
+        left: 2px;
+        width: 36px;
+        background-color:black;
+        top:0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0px 8px 0px black,0px -8px 0px black;
+    }
+    
+    nav{
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav li a{
+        display: block;
+        padding: 10px 20px;
+        border-bottom: 2px solid #672E45;
+    }
+    
+    #menu_control:checked ~ .header nav{
+        left: 0;
+    }
+
+    /* header-icon */
+    .header .icon i{
+        font-size: 18px;
+        padding: 5px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+     /* header-img */
+    .header .logo img{
+        width: 60%;
+    }
+
+    /* header- li動畫 */
+    li:before {
+        display: none;
+    }
+/* ----------------------------------- */
+    /* background */
+    .banner{
+        position: relative;
+        width: 100%;
+        margin-top: auto;
+    }
+    
+    .banner-pic img{
+        width: 100%;
+        vertical-align: top;
+    }
+    
+    .banner-txt{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    .banner-txt h1{
+        font-size: 18px;
+    }
+/* ----------------------------------- */
+    /* 聯絡我們_資訊 */
+    .contact_info{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact_info_phone,.contact_info_mail,.contact_info_time{
+        margin-top: 30px;
+    }
+
+    .contact_info_pic{
+        width: 50px;
+    }
+
+    .contact_info span{
+        font-size: 14px;
+    }
+
+    .contact_info{
+        margin-top: 20px;
+    }
+/* ----------------------------------- */
+    /* 聯絡我們_填單 */
+    .contact_form_write{
+        margin-top: 50px;
+    }
+
+    .contact_form_write form .name,.contact_form_write form .tel,.contact_form_write form .email,.contact_form_write form .ask,.contact_form_write form .textarea{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+   .contact_form_write label{
+        font-size: 14px;
+        margin-bottom: -10px;
+        padding: 10px;
+        box-sizing: border-box;
+   }
+
+   .contact_form_write form div input {
+        margin: 10px;
+        padding: 15px;
+        font-size: 14px;
+   }
+
+   #textarea{
+    font-size: 14px;
+    margin: 10px;
+   }
+
+   .contact_form_button{
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .contact_form_button .reset button, .contact_form_button .submit button{
+    width: 200px;
+    font-size: 14px;
+    margin-bottom: 40px;
+    padding: 10px;
+   }
+/* ----------------------------------- */
+     /* Join our newsletter */
+     .join-our-newsletter{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .newletter-title,.newsletter-text,.newsletter-input{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .newletter-title h2{
+        font-size: 22px;
+        line-height: 40px;
+    }
+
+    .join-our-newsletter{
+        margin-top: 50px;
+    }
+
+    .newsletter-text i{
+        font-size: 50px;
+    }
+
+    .newsletter-text p{
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .join-our-newsletter .newsletter-text{
+        margin-top: 20px;
+    }
+
+    /* subscribe */
+    .newsletter-input input{
+        width: 230px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .newsletter-input button{
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .newsletter-input p{
+        font-size: 14px;
+        max-width: 330px;
+        margin: auto;
+        margin-top: 10px;
+        line-height: 30px;
+    }
+
+    .newsletter-input form{
+        text-align: center;
+    }
+/* ----------------------------------- */
+    /* footer */
+    .footer-info{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    .footer-info .brand,.footer-info .help,.footer-info .more-info,.footer-info .follow-us{  
+        width: 100%;
+    }
+    
+    footer .footer-info h3{
+        font-size: 20px;
+    }
+
+    footer .footer-info a span b{
+        font-size: 14px;
+    }
+
+    .footer-logo img{
+        width: 80%;
+    }
+
+    .footer-logo{
+        text-align: center;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .footer-info .toggle ~ a {
+        display: none;
+    }
+
+    .footer-info .toggle.active + a {
+        display: block; 
+    }
+
+    .toggle {
+        cursor: pointer;
+    }
+
+    .toggle-icon{
+        display: inline;
+        float: right;
+    }
+
+    footer h3{
+        border-bottom: 1px solid black;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    footer a{
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .links-wrapper{
+        display: flex;
+    }
+
+    .follow-us .links-wrapper a{
+        display: none;
+    }
+/* ----------------------------------- */
+    /* TOP鍵 */
+    #myBtn { 
+        bottom: 10px; 
+        right: 10px;  
+      }
+   
+}
+
+

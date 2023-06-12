@@ -1,0 +1,927 @@
+*{
+    padding:0px;
+    margin: 0px;
+    font-size: 18px;
+    color: black;
+    font-family: 'Nunito Sans', sans-serif;
+}
+/* ----------------------------------------------- */
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    list-style-type: none;
+}
+
+nav li a{
+    text-decoration: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header img{
+    vertical-align: top;
+}
+
+.header .icon i{
+    font-size: 24px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+li { /*以下是nav-item動畫*/
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+  
+li:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #672E45;
+    transition: width 0.3s;
+}
+
+li:hover:before {
+    width: 100%;
+}
+
+#menu_control,.menu_btn{
+    display: none;
+}
+/* ----------------------------------------------- */
+/*  background*/
+.banner{
+    position: relative;
+    width: 100%;
+    margin-top: 84px;
+}
+
+.banner-pic img{
+    width: 100%;
+    vertical-align: top;
+}
+
+.banner-txt{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.banner-txt h1{
+    font-size: 52px;
+}
+/* ----------------------------------------------- */
+/* 購物車_流程 */
+.addtocart_process{
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    margin-top: 100px;
+}
+
+.addtocart_process span{
+    display: block;
+    width: 427px;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.addtocart_process .process_first{
+    background-color: #672E45;
+    color: #FFFFFF;
+}
+
+.addtocart_process .process_second{
+    background-color:#DBE4D5;
+}
+
+.addtocart_process .process_third{
+    background-color: #DBE4D5;
+}
+/* ----------------------------------------------- */
+/* 項目_商品*/
+.product_label{
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid;
+    margin-top: 100px;
+    font-weight: 700;
+}
+
+.product_label span{
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.product_items{
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.product_items .product_name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product_items .product_name,.product_items .product_pirce,.product_items .product_amount,.product_items .product_quantity{
+    width: 25%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.product_items .product_cancel{
+    position: absolute;
+    right: 0;
+}
+
+.product_items .product_name{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.product_cancel button{
+    background-color: #FFFFFF;
+    border-style: none;
+}
+
+.product_quantity{
+    display: flex;
+    justify-content: center;
+}
+
+.product_quantity span{
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.product_quantity button{
+    border-style: none;
+    padding: 5px;
+    background-color: #DBE4D5;
+    box-sizing: border-box;
+}
+
+.product_quantity .quantity_button{
+    background-color: #DBE4D5;
+    width: 120px;
+    box-sizing: border-box;
+    border: 1px solid;
+}
+
+.product_name img{
+    width: 40%;
+}
+/* ----------------------------------------------- */
+/* 選擇送貨及付款方式*/
+.addtocart_pay{
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.addtocart_pay .addtocart_choose_pay{
+    width: 530px;
+}
+
+.addtocart_choose_pay .pay_title{
+    text-align: center;
+    border-bottom: 2px solid;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+
+.addtocart_pay .pay_transport{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.pay_transport select{
+    width: 320px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #DBE4D5;
+    margin-top: 20px;
+}
+
+.addtocart_pay .pay_payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.pay_payment select{
+    width: 320px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #DBE4D5;
+    margin-top: 20px;
+}
+
+.pay_title span{
+    font-weight: 700;
+    font-size: 20px;
+}
+/* ----------------------------------------------- */
+/* 訂單資訊 */
+.addtocart_pay .addtocart_order{
+    width: 530px;
+}
+
+.addtocart_order .order_title{
+    text-align: center;
+    border-bottom: 2px solid;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.order_info span{
+    width: 265px;
+}
+
+.order_info div{
+    display: flex;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.addtocart_pay .order_checkout{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.order_checkout_button button{
+    width: 240px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #672E45;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+/* ----------------------------------------------- */
+/* 宅配服務、線上支付、保存與食用 */
+.addtocart_precautions_block{
+    width: 100%;
+    margin: auto;
+    background-color: #DBE4D5;
+    margin-top: 5%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.delivery_service,.save_food{
+    width: 36%;
+}
+
+.online_payment{
+    width: 28%;
+}
+
+.addtocart_precautions_block .addtocart_precautions{
+    max-width: 1280px;
+    margin: auto;
+    background-color: #DBE4D5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery_service .delivery_service_title i{
+    font-size: 50px;
+}
+
+.delivery_service .delivery_service_title span{
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+.delivery_service .delivery_service_title{
+    display: flex;
+}
+
+.delivery_service .delivery_service_txt {
+    line-height: 40px;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.online_payment .online_payment_title i{
+    font-size: 50px;
+}
+
+.online_payment .online_payment_title span{
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+.online_payment .online_payment_title{
+    display: flex;
+}
+
+.online_payment .online_payment_txt{
+    line-height: 40px;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.save_food .save_food_title i{
+    font-size: 50px;
+}
+
+.save_food .save_food_title span{
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+.save_food .save_food_title{
+    display: flex;
+}
+
+.save_food .save_food_txt{
+    line-height: 40px;
+    margin-top: 30px;
+    margin-left: 65px;
+}
+/* ----------------------------------------------- */
+/* Join our newsletter */
+.join-our-newsletter{
+    background-color: #672E45;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    justify-content: space-around;
+
+}
+
+.newletter-title h2{
+    text-align: center;
+    font-size: 44px;
+    color: #fff;
+}
+
+.newsletter-text{
+    display: flex;    
+}
+
+.newsletter-text p{
+    width: 250px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.newsletter-text i {
+    font-size: 80px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    transform: rotate(-15deg);
+}
+
+.newsletter-input p{
+    max-width: 520px;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.newsletter-input input{
+    background-color:rgba(255, 255, 255, 0.5); 
+    border: 1px solid #fff;
+    padding: 15px;
+    width: 350px;
+}
+
+.newsletter-input input::placeholder{
+    color: #fff;  
+}
+
+.newsletter-input button{
+    padding: 15px;
+    box-sizing: border-box;
+}
+/* ----------------------------------------------- */
+/* footer */
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo img{
+    vertical-align: top;
+}
+
+.footer-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+
+.footer-logo{
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.brand,.help,.more-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info h3{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.footer-info a{
+    text-decoration: none;
+    line-height: 40px;
+}
+
+.follow-us a{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.follow-us i{
+    font-size: 24px;
+}
+
+.toggle-icon{
+    display: none;
+}
+/* ----------------------------------------------- */
+/* TOP鍵 */
+button img{
+    vertical-align: top;
+    width: 50px;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 50px; 
+    background:none;
+    cursor: pointer; 
+    opacity: 0.5;
+    border: none;
+    z-index: 1;
+  }
+  #myBtn:hover {
+    opacity:0.8; 
+  }
+/* -----------------------------媒體查詢----------------------------- */
+@media screen and (max-width:768px){
+    /* header-漢堡 */
+    #menu_control{
+        position: absolute;
+    }
+
+    .header{
+        position: relative;
+    }
+
+    .header .icon {
+        margin-left: auto;
+        display: flex;
+    }
+    
+    .menu_btn{
+        position: relative; 
+        width: 40px;
+        height: 40px;
+        display: block;
+        cursor: pointer;
+    }
+    
+    .menu_btn span{
+        width: 1px;
+        height: 1px;
+    }
+    
+    .menu_btn::before{
+        content:'';
+        position: absolute;
+        height: 2px;
+        left: 2px;
+        width: 36px;
+        background-color:black;
+        top:0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0px 8px 0px black,0px -8px 0px black;
+    }
+    
+    nav{
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav li a{
+        display: block;
+        padding: 10px 20px;
+        border-bottom: 2px solid #672E45;
+    }
+    
+    #menu_control:checked ~ .header nav{
+        left: 0;
+    }
+
+    /* header-icon */
+    .header .icon i{
+        font-size: 18px;
+        padding: 5px;
+        padding-right: 15px;
+        box-sizing: border-box;
+    }
+
+     /* header-img */
+    .header .logo img{
+        width: 60%;
+    }
+
+    /* header- li動畫 */
+    li:before {
+        display: none;
+    }
+/* ----------------------------------------------- */
+    /* background */
+    .banner{
+        position: relative;
+        width: 100%;
+        margin-top: auto;
+    }
+    
+    .banner-pic img{
+        width: 100%;
+        vertical-align: top;
+    }
+    
+    .banner-txt{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+    .banner-txt h1{
+        font-size: 18px;
+    }
+/* ----------------------------------------------- */
+    /* 購物車_流程 */
+    .addtocart_process{
+        margin-top: 50px;
+    }
+
+    .addtocart_process span {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .addtocart_process .process_second,.addtocart_process .process_third{
+        display: none;
+    }
+
+    .addtocart_process .process_first{
+        width: 100%;
+    }
+/* ----------------------------------------------- */
+    /* 購物車_項目 */
+    /* 項目 */
+    .product_label span {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .product_label{
+        margin-top: 50px;
+    }
+    /* ITEM */
+    .product_items {
+        margin-top: 30px;
+    }
+
+    .product_items .product_name {
+        flex-direction: column;
+    }
+
+    .product_name span{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .product_name img {
+        width: 70%;
+    }
+    /* PRICE */
+    .product_pirce span{
+        font-size: 14px;
+    }
+    /* QUANTITY */
+    .product_quantity .quantity_button {
+        width: 70px;
+    }
+
+    .quantity_button span{
+        font-size: 14px;
+    }
+
+    .quantity_button button i{
+        font-size: 10px;
+    }
+
+    .product_quantity span {
+        padding: 0px;
+    }
+
+    /* SUBTOTAL */
+    .product_amount span{
+        font-size: 14px;
+    }
+    /* cancel */
+    .product_cancel button i{
+        font-size: 14px;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+/* ----------------------------------------------- */
+    /* 選擇送貨及付款方式 & 訂單資訊 */
+    /* 選擇送貨及付款方式 */
+    .addtocart_pay{
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    .addtocart_pay .addtocart_choose_pay{
+        width: 100%;
+    }
+
+    .addtocart_pay .addtocart_order{
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .pay_title span,.order_title span b{
+        font-size: 16px;
+    }
+
+    .pay_transport span,.pay_payment span{
+        font-size: 16px;
+    }
+
+    .pay_transport select,.pay_payment select{
+        font-size: 14px;
+        width: 280px;
+    }
+
+    .pay_transport select option,.pay_payment select option{
+        font-size: 14px;
+    }
+
+    .addtocart_pay .pay_transport{
+        margin-top: 20px;
+    }
+    /* 訂單資訊 */
+    .order_title span b{
+        font-size: 16px;
+    }
+
+    .order_info span,.order_info span b{
+        font-size: 14px;
+    }
+
+    .order_checkout_button button {
+        font-size: 14px;
+        width: 280px;
+    }
+
+    .order_info{
+        margin-top: 20px;
+    }
+/* ----------------------------------------------- */
+    /* 宅配服務、線上支付、保存與食用 */
+    .addtocart_precautions_block .addtocart_precautions {
+        flex-wrap: wrap;
+    }
+
+    .delivery_service,.online_payment,.save_food{
+        width: 100%;
+        margin: 20px;
+    }
+
+    .delivery_service .delivery_service_title span,.online_payment .online_payment_title span,.save_food .save_food_title span{
+        font-size: 16px;
+    }
+
+    .delivery_service .delivery_service_title i,.online_payment .online_payment_title i,.save_food .save_food_title i{
+       font-size: 30px;
+    }
+
+    .addtocart_precautions p{
+        font-size: 14px;
+    }
+
+    .delivery_service .delivery_service_txt,.online_payment .online_payment_txt ,.save_food .save_food_txt{
+        margin-top: 10px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .delivery_service_title, .online_payment_title, .save_food_title {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+/* ----------------------------------------------- */
+     /* Join our newsletter */
+     .join-our-newsletter{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .newletter-title,.newsletter-text,.newsletter-input{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .newletter-title h2{
+        font-size: 22px;
+        line-height: 40px;
+    }
+
+    .join-our-newsletter{
+        margin-top: 0px;
+    }
+
+    .newsletter-text i{
+        font-size: 50px;
+    }
+
+    .newsletter-text p{
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .join-our-newsletter .newsletter-text{
+        margin-top: 20px;
+    }
+
+    /* subscribe */
+    .newsletter-input input{
+        width: 230px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .newsletter-input button{
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .newsletter-input p{
+        font-size: 14px;
+        max-width: 330px;
+        margin: auto;
+        margin-top: 10px;
+        line-height: 30px;
+    }
+
+    .newsletter-input form{
+        text-align: center;
+    }
+/* ----------------------------------------------- */
+    /* footer */
+    .footer-info{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    .footer-info .brand,.footer-info .help,.footer-info .more-info,.footer-info .follow-us{  
+        width: 100%;
+    }
+    
+    footer .footer-info h3{
+        font-size: 20px;
+    }
+
+    footer .footer-info a span b{
+        font-size: 14px;
+    }
+
+    .footer-logo img{
+        width: 80%;
+    }
+
+    .footer-logo{
+        text-align: center;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .footer-info .toggle ~ a {
+        display: none;
+    }
+
+    .footer-info .toggle.active + a {
+        display: block; 
+    }
+
+    .toggle {
+        cursor: pointer;
+    }
+
+    .toggle-icon{
+        display: inline;
+        float: right;
+    }
+
+    footer h3{
+        border-bottom: 1px solid black;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    footer a{
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .links-wrapper{
+        display: flex;
+    }
+
+    .follow-us .links-wrapper a{
+        display: none;
+    }
+/* ----------------------------------------------- */
+    /* TOP鍵 */
+    #myBtn { 
+        bottom: 10px; 
+        right: 10px;  
+      }
+   
+}
