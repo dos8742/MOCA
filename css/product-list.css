@@ -158,6 +158,7 @@ li:hover:before {
     width: 140px;
     padding: 5px;
     box-sizing: border-box;
+    border: 1px solid black;
 }
 
 .shopping_product .quantity i{
@@ -480,11 +481,23 @@ button img{
     }
 
     .quantity button{
-        padding: 2px;
+        padding: 6px;
     }
 
     .product_addtocart .addtocart button{
-        padding: 3px;
+        padding: 8px;
+    }
+
+    .shopping_product .product_price {
+        margin-top: 25px;
+    }
+
+    .shopping_product .quantity{
+        margin-top: 25px;
+    }
+
+    .product_addtocart .addtocart {
+        margin-top: 25px;
     }
 /* ---------------------------------------------- */
     /* 產品項目的資訊 */
