@@ -131,6 +131,7 @@ nav li:hover:before {
 
 .address_sort span{
     display: inline-block;
+    line-height: 30px;
 }
 
 .address_sort .adress{
@@ -212,8 +213,9 @@ nav li:hover:before {
 }
 
 .newsletter-input button{
-    padding: 15px;
+    padding: 16px;
     box-sizing: border-box;
+    border: 1px solid black;
 }
 /* ----------------------------------------- */
 /* footer */
@@ -474,7 +476,7 @@ button img{
     }
 
     .newsletter-input button{
-        padding: 10px;
+        padding: 11px;
         box-sizing: border-box;
         font-size: 14px;
     }
