@@ -161,6 +161,10 @@ li:hover:before {
     width: 100%;
     vertical-align: top;
 }
+
+.contact_info_time .contact_info_content span{
+    line-height: 40px;
+}
 /* ----------------------------------- */
 /* 聯絡我們_填單 */
 .contact_form_write{
@@ -198,7 +202,6 @@ li:hover:before {
     resize: horizontal;
     resize: vertical;
     resize: none;
-    
 }
 
 .contact_form_button{
@@ -508,6 +511,7 @@ button img{
         margin-bottom: -10px;
         padding: 10px;
         box-sizing: border-box;
+        margin-bottom: 5px;
    }
 
    .contact_form_write form div input {
@@ -519,6 +523,7 @@ button img{
    #textarea{
     font-size: 14px;
     margin: 10px;
+    line-height: 30px;
    }
 
    .contact_form_button{
@@ -530,7 +535,7 @@ button img{
     width: 200px;
     font-size: 14px;
     margin-bottom: 40px;
-    padding: 10px;
+    padding: 15px;
    }
 /* ----------------------------------- */
      /* Join our newsletter */
