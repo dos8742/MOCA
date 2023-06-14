@@ -131,7 +131,6 @@ nav li:hover:before {
 
 .address_sort span{
     display: inline-block;
-    line-height: 30px;
 }
 
 .address_sort .adress{
@@ -426,6 +425,7 @@ button img{
 
     .address_sort span{
         font-size: 14px;
+        line-height: 40px;
     }
 
     .address_sort .adress{
