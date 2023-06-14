@@ -57,17 +57,34 @@ document.addEventListener('DOMContentLoaded', function() {
   var blurEffect = document.createElement('div');
   blurEffect.classList.add('blur-effect');
 
-  image.addEventListener('click', function() {
+  image.addEventListener('click', function(event) {
+    event.stopPropagation();
     videoContainer.style.display = 'block';
     video.play();
     document.body.appendChild(blurEffect);
   });
 
-  closeButton.addEventListener('click', function() {
+  closeButton.addEventListener('click', function(event) {
+    event.stopPropagation();
+    closeVideo();
+  });
+
+  document.addEventListener('click', function() {
+    closeVideo();
+  });
+
+  blurEffect.addEventListener('click', function(event) {
+    event.stopPropagation();
+    if (event.target === blurEffect) {
+      closeVideo();
+    }
+  });
+
+  function closeVideo() {
     videoContainer.style.display = 'none';
     video.pause();
     document.body.removeChild(blurEffect);
-  });
+  }
 });
 // --------------------------------------------------------
 // TOP鍵
