@@ -460,6 +460,10 @@ button img{
         margin-top: 20px;
     }
 
+    .newletter-title h2 br{
+        display: none;
+    }
+
     /* subscribe */
     .newsletter-input input{
         width: 230px;
