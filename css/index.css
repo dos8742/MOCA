@@ -346,8 +346,9 @@ li:hover:before {
 }
 
 .newsletter-input button{
-    padding: 15px;
+    padding: 16px;
     box-sizing: border-box;
+    border: 1px solid black;
 }
 /* ----------------------------------------------------- */
 /* footer */
@@ -522,7 +523,7 @@ button img{
 
     .introduce-title span{
         font-size: 22px;
-        line-height: 30px;
+        line-height: 40px;
     }
 
     .introduce-pic{
@@ -533,6 +534,7 @@ button img{
     .introduce-text{
         width: 350px;
         margin-top: 20px;
+        line-height: 40px;
     }
 
     .introduce-text p{
@@ -606,6 +608,10 @@ button img{
     .coming-soon-product .product span{
         font-size: 14px;
     }
+
+    .coming-soon-product .product_sixth{
+        display: none;
+    }
 /* ----------------------------------------------------- */
     /* 關於我們 */
     .about-us{
@@ -642,6 +648,7 @@ button img{
 
     .about-us-text{
         width: 100%;
+        line-height: 45px;
     }
     
     .about-us-text h3{
@@ -701,7 +708,7 @@ button img{
     }
 
     .newsletter-input button{
-        padding: 10px;
+        padding: 11px;
         box-sizing: border-box;
         font-size: 14px;
     }
