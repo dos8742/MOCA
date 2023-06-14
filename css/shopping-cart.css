@@ -211,6 +211,10 @@ li:hover:before {
 .product_name img{
     width: 40%;
 }
+
+.product_name span{
+    margin:auto
+}
 /* ----------------------------------------------- */
 /* 選擇送貨及付款方式*/
 .addtocart_pay{
@@ -446,8 +450,9 @@ li:hover:before {
 }
 
 .newsletter-input button{
-    padding: 15px;
+    padding: 16px;
     box-sizing: border-box;
+    border: 1px solid black;
 }
 /* ----------------------------------------------- */
 /* footer */
@@ -635,7 +640,7 @@ button img{
 
     .addtocart_process span {
         font-size: 16px;
-        padding: 10px;
+        padding: 15px;
     }
 
     .addtocart_process .process_second,.addtocart_process .process_third{
@@ -649,7 +654,6 @@ button img{
     /* 購物車_項目 */
     /* 項目 */
     .product_label span {
-        padding: 5px;
         font-size: 14px;
     }
 
@@ -667,7 +671,7 @@ button img{
 
     .product_name span{
         font-size: 14px;
-        margin-top: 5px;
+        margin-top: 15px;
     }
 
     .product_name img {
@@ -753,6 +757,8 @@ button img{
     .order_checkout_button button {
         font-size: 14px;
         width: 280px;
+        border: 1px solid black;
+        padding: 15px;
     }
 
     .order_info{
@@ -840,7 +846,7 @@ button img{
     }
 
     .newsletter-input button{
-        padding: 10px;
+        padding: 11px;
         box-sizing: border-box;
         font-size: 14px;
     }
