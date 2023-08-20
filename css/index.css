@@ -82,7 +82,6 @@ li:hover:before {
 /* ----------------------------------------------------- */
 /* chef-introduce */
 .introduce{
-    /* background-color: aqua; */
     max-width: 1280px;
     margin: auto;
     display: flex;
