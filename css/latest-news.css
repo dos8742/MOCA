@@ -261,6 +261,16 @@ footer{
 .toggle-icon{
     display: none;
 }
+
+.copyright{
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+ }
+ 
+ .copyright p{
+    font-size: 16px;
+ }
 /* ---------------------------------------------- */
 /* TOP鍵 */
 button img{
@@ -539,6 +549,10 @@ footer a{
 
 .follow-us .links-wrapper a{
     display: none;
+}
+
+.copyright p{
+    font-size: 14px;
 }
 /* ---------------------------------------------- */
     /* TOP鍵 */
