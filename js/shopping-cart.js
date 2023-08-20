@@ -15,7 +15,7 @@ document.documentElement.scrollTop = 0;
 }
 // --------------------------------------------------------
 // 商品
-// Function to calculate subtotal and total
+// 計算小計和總計的函數
 function calculateTotal() {
   let productItems = document.getElementsByClassName('product_items');
   let subtotal = 0;
@@ -28,7 +28,7 @@ function calculateTotal() {
     subtotal += amount;
   }
 
-  let shipping = 80; // Change this value to the desired shipping amount
+  let shipping = 80; // 將此值更改為所需的運費金額
   let total = subtotal + shipping;
 
   document.querySelector('.order_info div:nth-child(1) span:nth-child(2)').textContent = 'NTD ' + subtotal;
@@ -36,7 +36,7 @@ function calculateTotal() {
   document.querySelector('.order_info div:nth-child(3) span:nth-child(2)').textContent = 'NTD ' + total;
 }
 
-// Function to handle quantity change
+// 處理數量變更的函數
 function handleQuantityChange(element, increment) {
   let quantitySpan = element.parentElement.querySelector('span');
   let quantity = parseInt(quantitySpan.textContent);
@@ -53,14 +53,14 @@ function handleQuantityChange(element, increment) {
   calculateTotal();
 }
 
-// Function to handle product deletion
+// 處理產品刪除的函數
 function handleProductDeletion(element) {
   let productItem = element.closest('.product_items');
   productItem.remove();
   calculateTotal();
 }
 
-// Add event listeners to quantity buttons and delete buttons
+// 新增事件監聽器至數量按鈕和刪除按鈕
 let quantityButtons = document.querySelectorAll('.quantity_button button');
 let deleteButtons = document.querySelectorAll('.product_cancel button');
 
