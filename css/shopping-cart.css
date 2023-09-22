@@ -180,6 +180,7 @@ li:hover:before {
 .product_cancel button{
     background-color: #FFFFFF;
     border-style: none;
+    cursor: pointer;
 }
 
 .product_quantity{
@@ -199,6 +200,7 @@ li:hover:before {
     padding: 5px;
     background-color: #DBE4D5;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .product_quantity .quantity_button{
@@ -252,6 +254,7 @@ li:hover:before {
     background-color: #DBE4D5;
     margin-top: 20px;
     border:1px solid black;
+    cursor: pointer;
 }
 
 .addtocart_pay .pay_payment{
@@ -269,6 +272,7 @@ li:hover:before {
     background-color: #DBE4D5;
     margin-top: 20px;
     border:1px solid black;
+    cursor: pointer;
 }
 
 .pay_title span{
@@ -311,6 +315,7 @@ li:hover:before {
     background-color: #672E45;
     color: #FFFFFF;
     font-weight: 700;
+    cursor: pointer;
 }
 /* ----------------------------------------------- */
 /* 宅配服務、線上支付、保存與食用 */
