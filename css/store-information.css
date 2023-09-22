@@ -123,6 +123,7 @@ nav li:hover:before {
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+    cursor: pointer;
 }
 
 .address_sort a{
@@ -215,6 +216,7 @@ nav li:hover:before {
     padding: 16px;
     box-sizing: border-box;
     border: 1px solid black;
+    cursor: pointer;
 }
 /* ----------------------------------------- */
 /* footer */

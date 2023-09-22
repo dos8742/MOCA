@@ -158,6 +158,7 @@ li:hover:before {
     font-weight: 700;
     color: #fff;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .member_content_login button:hover{
@@ -176,6 +177,7 @@ li:hover:before {
     background-color:#DBE4D5;
     font-weight: 700;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .member_content_register button:hover{
@@ -298,6 +300,7 @@ li:hover:before {
     padding: 16px;
     box-sizing: border-box;
     border: 1px solid black;
+    cursor: pointer;
 }
 /* ------------------------------------------ */
 /* footer */

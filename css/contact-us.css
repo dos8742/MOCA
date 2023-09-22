@@ -216,6 +216,7 @@ li:hover:before {
     background-color: #DBE4D5;
     font-weight: 700;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .contact_form_button .reset button:hover{
@@ -230,6 +231,7 @@ li:hover:before {
     color: #FFFFFF;
     font-weight: 700;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .contact_form_button .submit button:hover{
@@ -296,6 +298,7 @@ li:hover:before {
     padding: 16px;
     box-sizing: border-box;
     border: 1px solid black;
+    cursor: pointer;
 }
 /* ----------------------------------- */
 /* footer */
