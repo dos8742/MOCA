@@ -182,6 +182,7 @@ div.click-view{
 
 .shopping_product .product_name{
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .product_addtocart .addtocart button{
